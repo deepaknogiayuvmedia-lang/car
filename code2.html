@@ -152,7 +152,49 @@
   </style>
 </head>
 <body class="bg-[#f7f4ef] text-[#1c1e21] antialiased selection:bg-[#e95a35] selection:text-white min-h-screen flex flex-col">
-<header class="w-full bg-[#f7f4ef]/95 backdrop-blur sticky top-0 z-50 border-b border-[#ece6d9]"><div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between"><a class="flex items-center gap-2 group" href="index.html"><span class="font-extrabold text-xl tracking-wider text-black">RYDO MOBILITY</span><span class="text-[10px] uppercase font-semibold text-gray-400 tracking-widest pl-1 border-l border-gray-300">Car Rental</span></a><nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700"><a class="hover:text-black transition" href="code1.html">Rides</a><a class="hover:text-black transition" href="code2.html">Fleet</a><a class="hover:text-black transition" href="code3.html">Why us</a><a class="hover:text-black transition" href="code4.html">Cities</a><a class="hover:text-black transition" href="code5.html">Contact</a></nav><div class="flex items-center gap-4"><a class="bg-[#141416] hover:bg-black text-white text-xs font-semibold px-5 py-2.5 rounded-md transition shadow-sm hidden sm:inline-block" href="#booking">Get a ride</a><button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"><span class="block w-5 h-0.5 bg-gray-800 rounded"></span><span class="block w-5 h-0.5 bg-gray-800 rounded"></span><span class="block w-5 h-0.5 bg-gray-800 rounded"></span></button></div></div><div id="mobileMenu" class="hidden md:hidden bg-white border-b border-[#ece6d9] px-6 pb-4 pt-2"><a class="block py-2.5 text-sm font-medium text-gray-700 hover:text-black" href="code1.html">Rides</a><a class="block py-2.5 text-sm font-medium text-gray-700 hover:text-black" href="code2.html">Fleet</a><a class="block py-2.5 text-sm font-medium text-gray-700 hover:text-black" href="code3.html">Why us</a><a class="block py-2.5 text-sm font-medium text-gray-700 hover:text-black" href="code4.html">Cities</a><a class="block py-2.5 text-sm font-medium text-gray-700 hover:text-black" href="code5.html">Contact</a><a class="block py-2.5 text-sm font-semibold text-[#e95a35] hover:text-[#d84d28]" href="#booking">Get a ride</a></div></header>
+<header class="w-full bg-[#f7f4ef]/95 backdrop-blur sticky top-0 z-50 border-b border-[#ece6d9]">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+<a class="flex items-center gap-2 group" href="index.html">
+<span class="font-extrabold text-xl tracking-wider text-black">RYDO MOBILITY</span>
+<span class="text-[10px] uppercase font-semibold text-gray-400 tracking-widest pl-1 border-l border-gray-300">Car Rental</span>
+</a>
+<nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
+<a class="hover:text-black transition" href="code1.html">Rides</a>
+<a class="hover:text-black transition" href="code2.html">Fleet</a>
+<a class="hover:text-black transition" href="code3.html">Why us</a>
+<a class="hover:text-black transition" href="code4.html">Cities</a>
+<a class="hover:text-black transition" href="code5.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="bg-[#141416] hover:bg-black text-white text-xs font-semibold px-5 py-2.5 rounded-md transition shadow-sm hidden sm:inline-block" href="#booking">Get a ride</a>
+<button id="menuBtn" class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5">
+<span class="menu-line block w-5 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
+<span class="menu-line block w-5 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
+<span class="menu-line block w-5 h-0.5 bg-gray-800 rounded transition-all duration-300"></span>
+</button>
+</div>
+</div>
+<div id="mobileMenu" class="hidden md:hidden bg-white border-b border-[#ece6d9] px-6 pb-4 pt-2">
+<a class="block py-2.5 text-sm font-medium text-gray-700 hover:text-black" href="code1.html">Rides</a>
+<a class="block py-2.5 text-sm font-medium text-gray-700 hover:text-black" href="code2.html">Fleet</a>
+<a class="block py-2.5 text-sm font-medium text-gray-700 hover:text-black" href="code3.html">Why us</a>
+<a class="block py-2.5 text-sm font-medium text-gray-700 hover:text-black" href="code4.html">Cities</a>
+<a class="block py-2.5 text-sm font-medium text-gray-700 hover:text-black" href="code5.html">Contact</a>
+<a class="block py-2.5 text-sm font-semibold text-[#e95a35] hover:text-[#d84d28]" href="#booking">Get a ride</a>
+</div>
+<script>
+document.getElementById('menuBtn').addEventListener('click', function() {
+  var menu = document.getElementById('mobileMenu');
+  var lines = document.querySelectorAll('.menu-line');
+  menu.classList.toggle('hidden');
+  lines[0].classList.toggle('rotate-45');
+  lines[0].classList.toggle('translate-y-2');
+  lines[1].classList.toggle('opacity-0');
+  lines[2].classList.toggle('-rotate-45');
+  lines[2].classList.toggle('-translate-y-2');
+});
+</script>
+</header>
 <!-- Main Content Canvas -->
 <main class="flex-grow">
 <!-- Hero / Fleet Header Section -->
