@@ -1,0 +1,813 @@
+
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Book Your Cab | RYDO MOBILITY - Verified Intercity &amp; Outstation</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#f7f4ef',
+              surface: '#ffffff',
+              beige: '#f3ede2',
+              coral: '#e95a35',
+              'coral-hover': '#d84d28',
+              'coral-soft': '#fdf2ee',
+              dark: '#141416',
+              charcoal: '#1c1d21',
+              carddark: '#1b1c20',
+              muted: '#71717a',
+              border: '#e8e2d5'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f7f4ef;
+      color: #17181c;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+
+    /* Subtle custom details to match specific mock styling */
+    .custom-input:focus {
+      outline: none;
+      border-color: #e95a35;
+      box-shadow: 0 0 0 1px #e95a35;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-[#f7f4ef] text-[#1c1e21] antialiased selection:bg-[#e95a35] selection:text-white min-h-screen flex flex-col">
+  <header class="w-full bg-[#f7f4ef]/95 backdrop-blur sticky top-0 z-50 border-b border-[#ece6d9]">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+<a class="flex items-center gap-2 group" href="index.html">
+<span class="font-extrabold text-xl tracking-wider text-black">RYDO MOBILITY</span>
+<span class="text-[10px] uppercase font-semibold text-gray-400 tracking-widest pl-1 border-l border-gray-300">Car Rental</span>
+</a>
+<nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
+<a class="text-black font-semibold border-b-2 border-[#e95a35] pb-0.5" href="code1.html">Rides</a>
+<a class="hover:text-black transition" href="code2.html">Fleet</a>
+<a class="hover:text-black transition" href="code3.html">Why us</a>
+<a class="hover:text-black transition" href="code4.html">Cities</a>
+<a class="hover:text-black transition" href="code5.html">Contact</a>
+</nav>
+<div class="flex items-center">
+<a class="bg-[#141416] hover:bg-black text-white text-xs font-semibold px-5 py-2.5 rounded-md transition shadow-sm" href="#booking">
+          Get a ride
+        </a>
+</div>
+</div>
+</header>
+  <!-- Multi-Step Booking Progress Ribbon -->
+  <div class="border-b border-[#ece6d9] bg-white/70 py-3.5">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center justify-between max-w-2xl mx-auto text-xs font-medium">
+        <div class="flex items-center gap-2 text-emerald-700">
+          <span class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center font-bold text-[11px]">
+            <span class="material-symbols-outlined text-[14px]">check</span>
+          </span>
+          <span class="font-semibold hidden sm:inline">1. Route &amp; Date</span>
+        </div>
+        <div class="h-[1px] flex-1 bg-emerald-200 mx-3"></div>
+        <div class="flex items-center gap-2 text-black">
+          <span
+            class="w-5 h-5 rounded-full bg-[#e95a35] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">2</span>
+          <span class="font-bold">2. Vehicle &amp; Add-ons</span>
+        </div>
+        <div class="h-[1px] flex-1 bg-gray-200 mx-3"></div>
+        <div class="flex items-center gap-2 text-gray-400">
+          <span class="w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center text-[11px]">3</span>
+          <span class="hidden sm:inline">3. Passenger &amp; Review</span>
+        </div>
+        <div class="h-[1px] flex-1 bg-gray-200 mx-3"></div>
+        <div class="flex items-center gap-2 text-gray-400">
+          <span class="w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center text-[11px]">4</span>
+          <span class="hidden sm:inline">4. Confirmation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Route & Trip Bar (Matching Ref 3 Pill & Search aesthetics) -->
+  <section class="max-w-7xl mx-auto px-6 lg:px-12 mt-6 w-full">
+    <div
+      class="bg-white rounded-2xl p-5 border border-[#e8e2d5] shadow-2xs flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+      <!-- Trip Mode & Route Details -->
+      <div class="flex flex-wrap items-center gap-4 lg:gap-6">
+        <div class="inline-flex items-center bg-[#f3f0e8] p-1 rounded-lg text-xs font-semibold">
+          <span class="px-3 py-1 rounded bg-[#16171a] text-white shadow-xs">One-way</span>
+          <span class="px-3 py-1 text-gray-600 hover:text-black cursor-pointer">Round-trip</span>
+          <span class="px-3 py-1 text-gray-600 hover:text-black cursor-pointer">Airport</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-2">
+            <div class="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
+            <div>
+              <div class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Pickup Location</div>
+              <div class="text-xs sm:text-sm font-bold text-gray-900">Delhi NCR (Aerocity / Central)</div>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-gray-400 text-sm mx-1">arrow_forward</span>
+          <div class="flex items-center gap-2">
+            <div class="w-2.5 h-2.5 rounded-full bg-[#e95a35]"></div>
+            <div>
+              <div class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Drop Location</div>
+              <div class="text-xs sm:text-sm font-bold text-gray-900">Jaipur, Rajasthan</div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden xl:block h-7 w-[1px] bg-gray-200"></div>
+        <div class="flex items-center gap-3 text-xs text-gray-600">
+          <div class="flex items-center gap-1.5 bg-[#f6f4ed] px-3 py-1.5 rounded-lg border border-[#e8e2d5]">
+            <span class="material-symbols-outlined text-[16px] text-gray-700">calendar_today</span>
+            <span class="font-medium text-gray-900">Tomorrow, 06:30 AM</span>
+          </div>
+          <div class="flex items-center gap-1.5 bg-[#f6f4ed] px-3 py-1.5 rounded-lg border border-[#e8e2d5]">
+            <span class="material-symbols-outlined text-[16px] text-[#e95a35]">route</span>
+            <span class="font-medium text-gray-800">270 km • ~4h 30m</span>
+          </div>
+        </div>
+      </div>
+      <!-- Quick action -->
+      <button
+        class="text-xs font-semibold text-gray-800 hover:text-[#e95a35] border border-[#e8e2d5] hover:border-[#e95a35] bg-white px-3.5 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-2xs self-end lg:self-center">
+        <span class="material-symbols-outlined text-[15px]">tune</span>
+        <span>Modify Search</span>
+      </button>
+    </div>
+  </section>
+  <!-- Main Interactive Body -->
+  <main class="max-w-7xl mx-auto px-6 lg:px-12 py-8 w-full flex-1">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <!-- LEFT COLUMN: 65% - Vehicle Selection, Extras & Passenger Data -->
+      <div class="lg:col-span-8 flex flex-col gap-8">
+        <!-- 1. VEHICLES FOR EVERY JOURNEY (Matching ref 3 Fleet layout & card studio background) -->
+        <section>
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-4 gap-2">
+            <div>
+              <span class="text-[11px] font-bold tracking-widest uppercase text-[#e95a35] block mb-1">The Fleet</span>
+              <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">Vehicles for every journey</h1>
+            </div>
+            <span class="text-xs text-gray-500 font-medium flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Live Cab Availability Confirmed
+            </span>
+          </div>
+          <!-- Fleet Selection Cards Grid -->
+          <div class="grid grid-cols-1 gap-4">
+            <!-- Sedan - Selected / Most Booked (Reference styling) -->
+            <div
+              class="bg-white rounded-2xl border-2 border-[#e95a35] shadow-md overflow-hidden relative transition group">
+              <div class="grid grid-cols-1 md:grid-cols-12 items-stretch">
+                <!-- Left Car Graphic studio background -->
+                <div
+                  class="md:col-span-6 bg-gradient-to-b from-[#fdf2ee] via-[#fbf6f0] to-[#f0ebe1] p-6 flex flex-col justify-between relative border-b md:border-b-0 md:border-r border-[#ede7db]">
+                  <div class="flex items-center justify-between z-10">
+                    <span
+                      class="bg-[#e95a35] text-white text-[9px] uppercase font-bold tracking-wider px-2 py-0.5 rounded shadow-xs">
+                      Most Booked
+                    </span>
+                    <span
+                      class="text-emerald-700 bg-white/90 backdrop-blur-sm text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-100 flex items-center gap-0.5">
+                      <span class="material-symbols-outlined text-[13px]">bolt</span> Instant Confirmation
+                    </span>
+                  </div>
+                  <div class="my-4 flex items-center justify-center">
+                    <img alt="Executive Sedan - Maruti Ciaz / Honda City"
+                      class="w-full h-44 object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA0llLLMGpUv90wmwy5g6Ze9FynFYQF8Nb9I_EmUFQ3Kps-xNMLTNFQUVLvlcO2n9xm_Wk5L3eDI0ryiJyDXI_sMavebb2g2GF9OCs-8am-AENy7M42CXSiwOOw8EaK8GJo9sZeqmsS9MDhV5dRk5BZhlKvk6uvjbfOB38A0WBdrblOKEbBL7jlIz6SxYPycQP5bDLYiXIrjCXmehMRllk-T2OPGHTbrpEMAvkUGreMCo8GlDUkVDnog" />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] text-gray-500 z-10 pt-1">
+                    <span class="flex items-center gap-1 font-medium text-emerald-700">
+                      <span class="material-symbols-outlined text-[14px]">sanitizer</span> Clean &amp; Sanitized
+                    </span>
+                    <span class="flex items-center gap-1 font-medium text-gray-700">
+                      <span class="material-symbols-outlined text-[14px]">speed</span> FASTag Enabled
+                    </span>
+                  </div>
+                </div>
+                <!-- Right Car Specs & Pricing Details -->
+                <div class="md:col-span-6 p-6 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between text-xs text-gray-500 mb-1">
+                      <span class="font-bold text-xl text-gray-900">Sedan</span>
+                      <span class="text-xs font-semibold bg-[#f6f4ed] text-gray-700 px-2 py-0.5 rounded">Comfort • 4
+                        seats</span>
+                    </div>
+                    <p class="text-xs text-gray-600 mb-4">Maruti Suzuki Ciaz, Honda City, Hyundai Verna or equivalent
+                      prime sedan</p>
+                    <!-- Specifications Bento Grid -->
+                    <div class="grid grid-cols-2 gap-2 text-xs mb-5">
+                      <div class="bg-[#f7f4ef] p-2.5 rounded-lg border border-[#e8e2d5] flex items-center gap-2">
+                        <span
+                          class="material-symbols-outlined text-gray-700 text-[18px]">airline_seat_recline_normal</span>
+                        <span class="font-medium text-gray-800">4 Passengers</span>
+                      </div>
+                      <div class="bg-[#f7f4ef] p-2.5 rounded-lg border border-[#e8e2d5] flex items-center gap-2">
+                        <span class="material-symbols-outlined text-gray-700 text-[18px]">luggage</span>
+                        <span class="font-medium text-gray-800">3 Luggage Bags</span>
+                      </div>
+                      <div class="bg-[#f7f4ef] p-2.5 rounded-lg border border-[#e8e2d5] flex items-center gap-2">
+                        <span class="material-symbols-outlined text-gray-700 text-[18px]">ac_unit</span>
+                        <span class="font-medium text-gray-800">Dual Climate AC</span>
+                      </div>
+                      <div class="bg-[#f7f4ef] p-2.5 rounded-lg border border-[#e8e2d5] flex items-center gap-2">
+                        <span
+                          class="material-symbols-outlined text-[#e95a35] text-[18px] material-symbols-fill">star</span>
+                        <span class="font-medium text-gray-800">4.9★ Chauffeur</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
+                    <div>
+                      <div class="flex items-baseline gap-2">
+                        <span class="text-2xl font-black text-gray-900">₹3,639</span>
+                        <span class="text-xs text-gray-400 line-through">₹4,200</span>
+                        <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">Save
+                          ₹561</span>
+                      </div>
+                      <div class="text-[11px] text-gray-500">Includes 270 km, Tolls &amp; Driver Allowance</div>
+                    </div>
+                    <div
+                      class="flex items-center gap-1.5 text-xs font-bold text-[#e95a35] bg-[#fdf2ee] border border-[#e95a35]/20 px-3 py-1.5 rounded-lg">
+                      <span class="material-symbols-outlined text-[16px]">check_circle</span> Selected
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Secondary Fleet Options Grid (Compact Hatchback & Premium SUV) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Hatchback Option -->
+              <div
+                class="bg-white rounded-2xl border border-[#e8e2d5] hover:border-gray-400 shadow-2xs hover:shadow-sm overflow-hidden flex flex-col justify-between transition cursor-pointer group">
+                <div
+                  class="h-44 bg-gradient-to-b from-[#fdf2ee] via-[#fbf6f0] to-[#f0ebe1] p-4 flex items-center justify-center relative">
+                  <img alt="Compact Hatchback"
+                    class="w-full h-36 object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1Omd05bGxQujDoLtiTn3Ck9Fm1eEbkNgQGqv9lclh2D2LrH4ibxK09o9OOgI-CB4J1Yc_JYO3YUGfx2uac8u73d_Tlu978QYio1KIpUM2wfMKazLOoDL1wwD0ndPRb2vsVkHzdaZotGKkj-NdI2bBKh2_RejBKeVvKb60mdCcAertRX2pScXe_4ENPVXOow7cw88UETXWs4ctj0BNtt8hkhinug5n0RR3V2qhYVVvPRUOnDsbn_r5rA" />
+                </div>
+                <div class="p-5">
+                  <div class="flex items-center justify-between text-xs text-gray-500 mb-1">
+                    <span class="font-bold text-base text-gray-900">Hatchback</span>
+                    <span class="text-[11px]">Compact • 4 seats</span>
+                  </div>
+                  <p class="text-xs text-gray-500 mb-3">Wagon R, Swift, Tiago or equivalent</p>
+                  <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+                    <div>
+                      <div class="text-lg font-extrabold text-gray-900">₹2,899</div>
+                      <div class="text-[10px] text-gray-400">All-inclusive</div>
+                    </div>
+                    <button
+                      class="text-xs font-semibold text-gray-800 hover:text-white bg-white hover:bg-black border border-[#e8e2d5] px-3 py-1.5 rounded-md transition">
+                      Select Class
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Premium SUV Option -->
+              <div
+                class="bg-white rounded-2xl border border-[#e8e2d5] hover:border-gray-400 shadow-2xs hover:shadow-sm overflow-hidden flex flex-col justify-between transition cursor-pointer group">
+                <div
+                  class="h-44 bg-gradient-to-b from-[#fdf2ee] via-[#fbf6f0] to-[#f0ebe1] p-4 flex items-center justify-center relative">
+                  <img alt="Premium Luxury SUV"
+                    class="w-full h-36 object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCmGLXpVB9c_kMzVeIAx60j4qKzgjtrWN_q1Avzhqu1UlzpSyd1I7fgWfT3CwElM82gO2qIzwX_2n4vddedkXyZ7Mcy5YYXbkfW0KuaPZIn451Rx1JsK8yPtSTZGpWxiOlH7xA-osZTchanPoScAo4wr6czXs77kj3sQw-t3AzQEwlJbuiQY-G9i8xMltk2F_pfjDJq5xC1A8YnPj4bf4UfVKUxwi0Yty84Hd-j6TmoCdd3e6TkofS7w" />
+                </div>
+                <div class="p-5">
+                  <div class="flex items-center justify-between text-xs text-gray-500 mb-1">
+                    <span class="font-bold text-base text-gray-900">Premium SUV</span>
+                    <span class="text-[11px]">Spacious • 6-7 seats</span>
+                  </div>
+                  <p class="text-xs text-gray-500 mb-3">Innova Crysta, XUV700 or equivalent</p>
+                  <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+                    <div>
+                      <div class="text-lg font-extrabold text-gray-900">₹4,999</div>
+                      <div class="text-[10px] text-gray-400">All-inclusive</div>
+                    </div>
+                    <button
+                      class="text-xs font-semibold text-gray-800 hover:text-white bg-white hover:bg-black border border-[#e8e2d5] px-3 py-1.5 rounded-md transition">
+                      Select Class
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 2. TRIP ADD-ONS & EXTRA SERVICES -->
+        <section class="bg-white rounded-2xl p-6 border border-[#e8e2d5] shadow-2xs space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <span
+                class="text-[10px] font-bold tracking-widest uppercase text-[#e95a35] block mb-1">Customizations</span>
+              <h2 class="text-lg font-bold text-gray-900">Trip Add-ons &amp; Extra Comfort</h2>
+            </div>
+            <span class="text-xs text-gray-500">Optional services</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+            <!-- Rooftop Luggage Carrier -->
+            <label
+              class="flex items-center justify-between p-3.5 rounded-xl border border-[#e8e2d5] hover:border-gray-400 bg-[#f7f4ef] cursor-pointer transition">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-lg bg-white border border-[#e8e2d5] flex items-center justify-center text-gray-700">
+                  <span class="material-symbols-outlined text-[18px]">roofing</span>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900">Rooftop Luggage Carrier</div>
+                  <div class="text-[11px] text-gray-500">For bulky extra baggage</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-gray-900">+₹200</span>
+                <input class="w-4 h-4 rounded text-[#e95a35] focus:ring-[#e95a35] border-gray-300" type="checkbox" />
+              </div>
+            </label>
+            <!-- Pet Friendly -->
+            <label
+              class="flex items-center justify-between p-3.5 rounded-xl border border-[#e8e2d5] hover:border-gray-400 bg-[#f7f4ef] cursor-pointer transition">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-lg bg-white border border-[#e8e2d5] flex items-center justify-center text-gray-700">
+                  <span class="material-symbols-outlined text-[18px]">pets</span>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900">Pet-Friendly Ride</div>
+                  <div class="text-[11px] text-gray-500">Special seat mat &amp; hygiene kit</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-gray-900">+₹300</span>
+                <input class="w-4 h-4 rounded text-[#e95a35] focus:ring-[#e95a35] border-gray-300" type="checkbox" />
+              </div>
+            </label>
+            <!-- Guaranteed Waiting Buffer -->
+            <label
+              class="flex items-center justify-between p-3.5 rounded-xl border border-[#e8e2d5] hover:border-gray-400 bg-[#f7f4ef] cursor-pointer transition">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-lg bg-white border border-[#e8e2d5] flex items-center justify-center text-gray-700">
+                  <span class="material-symbols-outlined text-[18px]">hourglass_top</span>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900">Guaranteed 60m Waiting</div>
+                  <div class="text-[11px] text-gray-500">Extra buffer at pickup point</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-gray-900">+₹150</span>
+                <input class="w-4 h-4 rounded text-[#e95a35] focus:ring-[#e95a35] border-gray-300" type="checkbox" />
+              </div>
+            </label>
+            <!-- Infant Child Seat -->
+            <label
+              class="flex items-center justify-between p-3.5 rounded-xl border border-[#e95a35]/40 bg-[#fdf2ee]/50 cursor-pointer transition">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-lg bg-white border border-[#e8e2d5] flex items-center justify-center text-[#e95a35]">
+                  <span class="material-symbols-outlined text-[18px]">child_care</span>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900">Child Safety Seat</div>
+                  <div class="text-[11px] text-gray-500">Pre-sanitized ISOFIX harness</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span
+                  class="text-[10px] font-bold uppercase bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Free</span>
+                <input checked="" class="w-4 h-4 rounded text-[#e95a35] focus:ring-[#e95a35] border-gray-300"
+                  type="checkbox" />
+              </div>
+            </label>
+          </div>
+        </section>
+        <!-- 3. PASSENGER DETAILS & DISPATCH INFO -->
+        <section class="bg-white rounded-2xl p-6 border border-[#e8e2d5] shadow-2xs space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-gray-100">
+            <div>
+              <span class="text-[10px] font-bold tracking-widest uppercase text-[#e95a35] block mb-1">Rider
+                Information</span>
+              <h2 class="text-lg font-bold text-gray-900">Passenger &amp; Chauffeur Coordination</h2>
+            </div>
+            <div
+              class="flex items-center gap-1 text-[11px] text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full font-medium">
+              <span class="material-symbols-outlined text-[14px]">verified</span> WhatsApp &amp; SMS Updates
+            </div>
+          </div>
+          <form class="space-y-4 text-xs">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[10px] uppercase font-bold text-gray-500 tracking-wider mb-1.5">Full Legal Name
+                  *</label>
+                <div class="relative">
+                  <span
+                    class="material-symbols-outlined absolute left-3 top-2.5 text-gray-400 text-[18px]">person</span>
+                  <input
+                    class="w-full bg-[#f6f4ed] border-0 rounded-lg pl-9 pr-3 py-2.5 text-xs text-gray-800 font-medium focus:ring-1 focus:ring-[#e95a35]"
+                    type="text" value="Rohit Sharma" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-[10px] uppercase font-bold text-gray-500 tracking-wider mb-1.5">Mobile Number
+                  *</label>
+                <div class="relative flex">
+                  <span class="inline-flex items-center px-3 rounded-l-lg bg-[#ece7dd] text-gray-800 font-bold text-xs">
+                    +91
+                  </span>
+                  <input
+                    class="w-full bg-[#f6f4ed] border-0 rounded-r-lg px-3 py-2.5 text-xs text-gray-800 font-medium focus:ring-1 focus:ring-[#e95a35]"
+                    type="tel" value="98712 34567" />
+                </div>
+                <div class="text-[10px] text-emerald-700 mt-1 flex items-center gap-1 font-medium">
+                  <span class="material-symbols-outlined text-[13px]">check_circle</span> OTP verified for instant
+                  highway dispatch
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[10px] uppercase font-bold text-gray-500 tracking-wider mb-1.5">Email Address
+                  (For Tax Invoice &amp; GPS tracking) *</label>
+                <div class="relative">
+                  <span class="material-symbols-outlined absolute left-3 top-2.5 text-gray-400 text-[18px]">mail</span>
+                  <input
+                    class="w-full bg-[#f6f4ed] border-0 rounded-lg pl-9 pr-3 py-2.5 text-xs text-gray-800 font-medium focus:ring-1 focus:ring-[#e95a35]"
+                    type="email" value="rohit.sharma@corporate.in" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-[10px] uppercase font-bold text-gray-500 tracking-wider mb-1.5">Exact Pickup
+                  Landmark / Address *</label>
+                <div class="relative">
+                  <span
+                    class="material-symbols-outlined absolute left-3 top-2.5 text-gray-400 text-[18px]">pin_drop</span>
+                  <input
+                    class="w-full bg-[#f6f4ed] border-0 rounded-lg pl-9 pr-3 py-2.5 text-xs text-gray-800 font-medium focus:ring-1 focus:ring-[#e95a35]"
+                    type="text" value="Terminal 3, Pillar 14, IGI Airport, New Delhi" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase font-bold text-gray-500 tracking-wider mb-1.5">Special Chauffeur
+                Instructions (Optional)</label>
+              <textarea
+                class="w-full bg-[#f6f4ed] border-0 rounded-lg p-3 text-xs text-gray-800 font-medium focus:ring-1 focus:ring-[#e95a35]"
+                placeholder="e.g., Please carry luggage cart, flight lands at 06:15 AM, prefer silent journey"
+                rows="2"></textarea>
+            </div>
+          </form>
+        </section>
+        <!-- 4. CORPORATE GST INVOICING -->
+        <section class="bg-white rounded-2xl p-6 border border-[#e8e2d5] shadow-2xs">
+          <label class="flex items-center justify-between cursor-pointer">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-[#fcf2ed] text-[#e95a35] flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-gray-900">Corporate GST Tax Invoice</div>
+                <div class="text-xs text-gray-500">Claim up to 18% Input Tax Credit (ITC) for business travel</div>
+              </div>
+            </div>
+            <input checked="" class="w-4 h-4 rounded text-[#e95a35] focus:ring-[#e95a35] border-gray-300"
+              type="checkbox" />
+          </label>
+          <div class="mt-4 pt-4 border-t border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div>
+              <label class="block text-[10px] uppercase font-bold text-gray-500 tracking-wider mb-1">Company Legal
+                Name</label>
+              <input
+                class="w-full bg-[#f6f4ed] border-0 rounded-lg px-3 py-2 text-xs text-gray-800 font-medium focus:ring-1 focus:ring-[#e95a35]"
+                type="text" value="Apex Global Tech Solutions LLP" />
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase font-bold text-gray-500 tracking-wider mb-1">Registered GSTIN
+                Number</label>
+              <input
+                class="w-full bg-[#f6f4ed] border-0 rounded-lg px-3 py-2 text-xs text-gray-800 font-medium uppercase tracking-wider font-semibold focus:ring-1 focus:ring-[#e95a35]"
+                type="text" value="07AABCA1234F1Z8" />
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- RIGHT COLUMN: 35% - STICKY FARE BREAKDOWN & CHECKOUT MODULE -->
+      <aside class="lg:col-span-4 lg:sticky lg:top-24 space-y-6">
+        <!-- FARE BREAKDOWN CARD -->
+        <div class="bg-white rounded-2xl p-6 border border-[#e8e2d5] shadow-sm">
+          <div class="flex items-center justify-between pb-3.5 border-b border-[#e8e2d5]">
+            <div>
+              <span class="text-[10px] uppercase font-bold tracking-wider text-gray-400">Indicative Fare</span>
+              <h3 class="text-lg font-bold text-gray-900">Trip Fare Summary</h3>
+            </div>
+            <span class="bg-[#f3f0e8] text-gray-700 text-[11px] font-semibold px-2.5 py-1 rounded-md">One-Way</span>
+          </div>
+          <!-- Line items -->
+          <div class="py-4 space-y-2.5 text-xs border-b border-gray-100">
+            <div class="flex justify-between items-center">
+              <span class="text-gray-600">Base Fare (270 km included)</span>
+              <span class="font-semibold text-gray-900">₹3,240</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-600">Driver Allowance &amp; Night Charges</span>
+              <span class="font-semibold text-gray-900">₹300</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-1">
+                <span class="text-gray-600">State Tolls &amp; Expressway Taxes</span>
+                <span class="material-symbols-outlined text-gray-400 text-[15px]"
+                  title="Delhi-Mumbai Expressway included">info</span>
+              </div>
+              <span class="font-bold text-emerald-700">Included</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-600">GST &amp; Safety Platform Fee</span>
+              <span class="font-semibold text-gray-900">₹99</span>
+            </div>
+            <div class="flex justify-between items-center text-[#e95a35]">
+              <span>Child Safety Seat Add-on</span>
+              <span class="font-bold">₹0 (Free)</span>
+            </div>
+          </div>
+          <!-- Total Fare Big Ribbon -->
+          <div class="py-4 flex justify-between items-baseline">
+            <div>
+              <div class="text-base font-bold text-gray-900">Total All-Inclusive Fare</div>
+              <div class="text-[10px] text-gray-500">No hidden fees, no surge charges</div>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-black text-gray-900 leading-none">₹3,639</div>
+            </div>
+          </div>
+          <!-- PAYMENT METHOD SELECTION (Clean minimalist card inputs) -->
+          <div class="space-y-2.5 pt-2">
+            <label class="block text-[10px] uppercase font-bold text-gray-400 tracking-wider">Select Payment
+              Mode</label>
+            <!-- Advance ₹500 (Active) -->
+            <label
+              class="flex items-start gap-3 p-3 rounded-xl border-2 border-[#e95a35] bg-[#fdf2ee]/60 cursor-pointer">
+              <input checked="" class="mt-0.5 text-[#e95a35] focus:ring-[#e95a35] border-gray-300" name="paymode"
+                type="radio" />
+              <div class="flex-1 text-xs">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-gray-900">Pay Advance ₹500 Now</span>
+                  <span class="bg-[#e95a35] text-white text-[9px] font-bold px-1.5 py-0.5 rounded uppercase">Most
+                    Flexible</span>
+                </div>
+                <p class="text-[11px] text-gray-600 mt-0.5">Pay remaining ₹3,139 directly to the chauffeur upon reaching
+                  destination.</p>
+              </div>
+            </label>
+            <!-- 100% Online -->
+            <label
+              class="flex items-start gap-3 p-3 rounded-xl border border-[#e8e2d5] hover:border-gray-400 bg-white cursor-pointer transition">
+              <input class="mt-0.5 text-[#e95a35] focus:ring-[#e95a35] border-gray-300" name="paymode" type="radio" />
+              <div class="flex-1 text-xs">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-gray-900">Pay 100% Online</span>
+                  <span class="text-emerald-700 text-[10px] font-bold">Extra ₹150 Off</span>
+                </div>
+                <p class="text-[11px] text-gray-500 mt-0.5">Pay ₹3,489 now via UPI, Credit/Debit Card or NetBanking.</p>
+              </div>
+            </label>
+            <!-- In Cab to Driver -->
+            <label
+              class="flex items-start gap-3 p-3 rounded-xl border border-[#e8e2d5] hover:border-gray-400 bg-white cursor-pointer transition">
+              <input class="mt-0.5 text-[#e95a35] focus:ring-[#e95a35] border-gray-300" name="paymode" type="radio" />
+              <div class="flex-1 text-xs">
+                <span class="font-bold text-gray-900">Pay in Cab to Driver</span>
+                <p class="text-[11px] text-gray-500 mt-0.5">Pay full ₹3,639 via UPI QR or Cash during the journey.</p>
+              </div>
+            </label>
+          </div>
+          <!-- Checkout Action Button (Matching Ref #e95a35 Coral CTA) -->
+          <div class="mt-6">
+            <button
+              class="w-full bg-[#e95a35] hover:bg-[#d84d28] text-white font-semibold py-3.5 px-6 rounded-lg text-xs tracking-wide transition shadow-sm flex items-center justify-center gap-2 group">
+              <span>Confirm &amp; Proceed to Pay ₹500</span>
+              <span
+                class="material-symbols-outlined text-[17px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+            </button>
+            <p class="text-center text-[10px] text-gray-500 mt-2.5 flex items-center justify-center gap-1 font-medium">
+              <span class="material-symbols-outlined text-[14px] text-emerald-600">lock</span>
+              <span>256-bit Bank Grade Encryption • Instant Confirmation</span>
+            </p>
+          </div>
+          <!-- Zero Cancellation Guarantee Pill -->
+          <div class="mt-4 p-3 rounded-xl bg-[#f7f4ef] border border-[#e8e2d5] flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-emerald-600 text-[18px]">verified_user</span>
+            <div class="text-xs">
+              <div class="font-bold text-gray-900">Zero Cancellation Fee</div>
+              <div class="text-[11px] text-gray-500">Free cancellation up to 1 hour before scheduled pickup.</div>
+            </div>
+          </div>
+        </div>
+        <!-- Support Card matching reference -->
+        <div class="bg-white rounded-2xl p-5 border border-[#e8e2d5] shadow-2xs space-y-3 text-xs">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-lg bg-[#fcf2ed] text-[#e95a35] flex items-center justify-center">
+              <span class="material-symbols-outlined text-[17px]">headphones</span>
+            </div>
+            <div>
+              <div class="font-bold text-gray-900">24/7 Dispatch Control Room</div>
+              <div class="text-[10px] text-gray-400">Faridabad Headquarters</div>
+            </div>
+          </div>
+          <p class="text-gray-500 leading-relaxed text-[11px]">
+            Live tracking and dedicated coordinator assigned 2 hours prior to journey. Need itinerary changes? Call our
+            highway helpline directly.
+          </p>
+          <div class="pt-2 border-t border-gray-100 flex items-center justify-between">
+            <a class="text-[#e95a35] hover:underline font-bold flex items-center gap-1" href="tel:+919310632440">
+              <span class="material-symbols-outlined text-[15px]">call</span> +91 93106 32440
+            </a>
+            <span class="text-gray-400 text-[11px]">All-India Support</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <!-- Stats Bar (Directly from Landing Page Reference) -->
+  <section class="max-w-7xl mx-auto px-6 lg:px-12 py-10 w-full">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white rounded-xl p-5 border border-[#e8e2d5] shadow-2xs">
+        <div class="text-lg sm:text-xl font-bold text-gray-900">All India</div>
+        <div class="text-xs text-gray-500 mt-0.5">Service coverage (120+ cities)</div>
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-[#e8e2d5] shadow-2xs">
+        <div class="text-lg sm:text-xl font-bold text-gray-900">Multiple</div>
+        <div class="text-xs text-gray-500 mt-0.5">Sedan, SUV, Hatchback classes</div>
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-[#e8e2d5] shadow-2xs">
+        <div class="text-lg sm:text-xl font-bold text-gray-900">Upfront</div>
+        <div class="text-xs text-gray-500 mt-0.5">Guaranteed fare guidance</div>
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-[#e8e2d5] shadow-2xs">
+        <div class="text-lg sm:text-xl font-bold text-gray-900">24/7</div>
+        <div class="text-xs text-gray-500 mt-0.5">Dedicated booking access</div>
+      </div>
+    </div>
+  </section>
+  <!-- Call to Action Banner (Directly from Ref 3 Orange Banner) -->
+  <section class="bg-[#e95a35] text-white py-8 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <h3 class="text-xl font-bold">Ready to ride?</h3>
+        <p class="text-xs text-white/90">Book your city, airport, or outstation cab today with zero surge pricing.</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <a class="bg-white text-gray-900 hover:bg-gray-100 font-semibold px-6 py-2.5 rounded-lg text-xs shadow transition whitespace-nowrap"
+          href="tel:+919310632440">
+          Call Dispatch Desk
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Dark Sleek Contact Card Section (Directly from Ref 3 Contact section) -->
+  <section class="py-12 px-6 lg:px-12 max-w-7xl mx-auto w-full" id="contact">
+    <div class="bg-[#121316] rounded-3xl p-8 sm:p-12 text-white border border-white/5 shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <!-- Left Contact Info -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <span class="text-[10px] font-bold tracking-widest uppercase text-[#e95a35] block mb-2">Operations</span>
+            <h2 class="text-3xl font-bold tracking-tight text-white mb-2">Get in touch</h2>
+            <p class="text-xs text-gray-400 leading-relaxed max-w-sm">
+              Need a custom corporate plan or have a trip question? Reach our 24/7 outstation coordination desk.
+            </p>
+          </div>
+          <div class="space-y-4 pt-2 text-xs">
+            <!-- Phone -->
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-[#e95a35] text-[20px] mt-0.5">call</span>
+              <div>
+                <div class="text-gray-400 text-[11px]">Phone</div>
+                <div class="text-white font-medium">+91 93106 32440</div>
+              </div>
+            </div>
+            <!-- Email -->
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-[#e95a35] text-[20px] mt-0.5">mail</span>
+              <div>
+                <div class="text-gray-400 text-[11px]">Email</div>
+                <div class="text-white font-medium">support@rydomobility.in</div>
+              </div>
+            </div>
+            <!-- Address -->
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-[#e95a35] text-[20px] mt-0.5">location_on</span>
+              <div>
+                <div class="text-gray-400 text-[11px]">Operations Office</div>
+                <div class="text-gray-300 leading-relaxed text-[11px]">
+                  House No. 79, Street No 4, Sai Nagar Part-2,<br />
+                  Near Basi Farm &amp; Kela Factory, Faridabad, Haryana 121002
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Quick Message Console -->
+        <div class="lg:col-span-7">
+          <form class="space-y-4 text-xs" onsubmit="event.preventDefault();">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[10px] uppercase font-bold text-gray-400 tracking-wider mb-1.5">Your
+                  Name</label>
+                <input
+                  class="w-full bg-[#1b1c20] border border-white/10 rounded-lg px-3.5 py-3 text-xs text-white placeholder:text-gray-500 focus:border-[#e95a35] focus:ring-0"
+                  placeholder="e.g. Rahul Verma" type="text" />
+              </div>
+              <div>
+                <label class="block text-[10px] uppercase font-bold text-gray-400 tracking-wider mb-1.5">Contact
+                  Number</label>
+                <input
+                  class="w-full bg-[#1b1c20] border border-white/10 rounded-lg px-3.5 py-3 text-xs text-white placeholder:text-gray-500 focus:border-[#e95a35] focus:ring-0"
+                  placeholder="+91 93106 32440" type="text" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase font-bold text-gray-400 tracking-wider mb-1.5">Special Route
+                Request or Query</label>
+              <textarea
+                class="w-full bg-[#1b1c20] border border-white/10 rounded-lg px-3.5 py-3 text-xs text-white placeholder:text-gray-500 focus:border-[#e95a35] focus:ring-0"
+                placeholder="Need multiple stops or custom pickup timing?" rows="3"></textarea>
+            </div>
+            <button
+              class="w-full bg-[#e95a35] hover:bg-[#d84d28] text-white font-semibold py-3 rounded-lg text-xs tracking-wide transition shadow-md"
+              type="submit">
+              Send message to operations
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-[#f7f4ef] border-t border-[#ece6d9] pt-14 pb-8 text-xs text-gray-600">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-[#ece6d9]">
+<div class="md:col-span-6 space-y-3">
+<div class="font-extrabold text-base tracking-wider text-black">RYDO MOBILITY</div>
+<p class="text-[11px] text-gray-500">City, airport, and intercity car rental service across India.</p>
+<div class="text-[11px] text-gray-500 leading-relaxed pt-2">
+            House No. 79, Street No 4, Sai Nagar Part-2,<br>
+            Near Basi Farm &amp; Kela Factory, Faridabad,<br>
+            Haryana 121002
+          </div>
+</div>
+<div class="md:col-span-3 space-y-2">
+<div class="font-bold text-gray-900 text-xs mb-3">Explore</div>
+<div><a class="hover:text-black transition" href="code1.html">Rides</a></div>
+<div><a class="hover:text-black transition" href="code2.html">Fleet</a></div>
+<div><a class="hover:text-black transition" href="code3.html">Why us</a></div>
+<div><a class="hover:text-black transition" href="code4.html">Cities</a></div>
+<div><a class="hover:text-black transition" href="code5.html">Contact</a></div>
+</div>
+<div class="md:col-span-3 space-y-2">
+<div class="font-bold text-gray-900 text-xs mb-3">Support</div>
+<div><a class="hover:text-black transition" href="index.html#faq">FAQ</a></div>
+<div><a class="hover:text-black transition" href="index.html#reviews">Reviews</a></div>
+<div><a class="hover:text-black transition" href="index.html#how-it-works">How it works</a></div>
+<div><a class="hover:text-black transition" href="code3.html">Why us</a></div>
+<div><a class="hover:text-black transition" href="code5.html">Contact us</a></div>
+</div>
+</div>
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[10px] text-gray-400 gap-2">
+<div class="">© 2026 RYDO MOBILITY. All rights reserved.</div>
+<div class="">Fares and vehicle availability may vary by route and time.</div>
+</div>
+</div>
+</footer>
+</body>
+
+</html>

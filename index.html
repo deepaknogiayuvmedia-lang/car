@@ -1,0 +1,716 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RYDO MOBILITY - Car Rental Across India</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Custom Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#f9f6f0',
+              beige: '#f3ede2',
+              coral: '#e95a35',
+              'coral-hover': '#d44926',
+              dark: '#141416',
+              surface: '#1c1d21',
+              charcoal: '#23252a',
+              muted: '#70707b',
+              border: '#e7e0d3'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Lucide Icons (Vanilla SVG Support) -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<style data-purpose="custom-enhancements">
+    /* Subtle custom details to match specific mock styling */
+    body {
+      background-color: #f7f4ef;
+      color: #17181c;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Clean custom input focus ring */
+    .custom-input:focus {
+      outline: none;
+      border-color: #e95a35;
+      box-shadow: 0 0 0 1px #e95a35;
+    }
+
+    /* Accordion transition styles */
+    details > summary {
+      list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+    details[open] summary svg {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body class="bg-[#f7f4ef] text-[#1c1e21] antialiased selection:bg-[#e95a35] selection:text-white">
+<!-- BEGIN: MainHeader -->
+<header class="w-full bg-[#f7f4ef]/95 backdrop-blur sticky top-0 z-50 border-b border-[#ece6d9]">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+<!-- Logo Branding -->
+<a class="flex items-center gap-2 group" href="#">
+<span class="font-extrabold text-xl tracking-wider text-black">RYDO MOBILITY</span>
+<span class="text-[10px] uppercase font-semibold text-gray-400 tracking-widest pl-1 border-l border-gray-300">Car Rental</span>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
+<a class="hover:text-black transition" href="code1.html">Rides</a>
+<a class="hover:text-black transition" href="code2.html">Fleet</a>
+<a class="hover:text-black transition" href="code3.html">Why us</a>
+<a class="hover:text-black transition" href="code4.html">Cities</a>
+<a class="hover:text-black transition" href="code5.html">Contact</a>
+</nav>
+<!-- Right Action CTA -->
+<div class="flex items-center">
+<a class="bg-[#141416] hover:bg-black text-white text-xs font-semibold px-5 py-2.5 rounded-md transition shadow-sm" href="#booking">
+          Get a ride
+        </a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="pt-8 pb-16 lg:pt-14 lg:pb-24 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start">
+<!-- Left Column: Title & Booking Form -->
+<div class="lg:col-span-6 space-y-6">
+<div>
+<span class="text-[11px] font-bold tracking-widest uppercase text-[#e95a35] inline-block mb-2">
+            Car Rental Across India
+          </span>
+<h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-black uppercase mb-3">
+            RYDO MOBILITY
+          </h1>
+<p class="text-base sm:text-lg font-bold text-gray-900 leading-snug">
+            Door shuts. Your journey starts on time.
+          </p>
+<p class="text-xs sm:text-sm text-gray-600 mt-1 max-w-lg leading-relaxed">
+            Plan city, airport, and outstation car rentals anywhere in India with clear indicative fares.
+          </p>
+</div>
+<!-- Booking Widget Card -->
+<div class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-[#e8e2d5] space-y-4" id="booking">
+<!-- Trip Mode Tabs -->
+<div class="grid grid-cols-3 bg-[#f3f0e8] p-1 rounded-lg text-xs font-semibold text-center text-gray-700">
+<button class="py-2 rounded-md bg-[#16171a] text-white shadow-sm transition">One-way</button>
+<button class="py-2 rounded-md hover:text-black transition">Round-trip</button>
+<button class="py-2 rounded-md hover:text-black transition">Airport</button>
+</div>
+<!-- Input Fields -->
+<div class="space-y-3 pt-1 text-xs">
+<!-- Pickup Field -->
+<div class="relative">
+<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+<div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+</div>
+<input class="w-full bg-[#f6f4ed] border-0 rounded-lg pl-8 pr-4 py-3 text-xs text-gray-800 font-medium focus:ring-1 focus:ring-[#e95a35] placeholder:text-gray-400" placeholder="Enter pickup location" type="text" value="asdasd">
+</div>
+<!-- Drop Field -->
+<div class="relative">
+<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+<div class="w-2 h-2 rounded-full bg-[#e95a35]"></div>
+</div>
+<input class="w-full bg-[#f6f4ed] border-0 rounded-lg pl-8 pr-4 py-3 text-xs text-gray-800 font-medium focus:ring-1 focus:ring-[#e95a35] placeholder:text-gray-400" placeholder="Enter drop location" type="text" value="asdasd">
+</div>
+<!-- Date & Time Grid -->
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block text-[10px] text-gray-500 font-medium uppercase mb-1">Date</label>
+<div class="relative">
+<input class="w-full bg-[#f6f4ed] border-0 rounded-lg px-3 py-2.5 text-xs text-gray-800 font-medium focus:ring-1 focus:ring-[#e95a35]" type="text" value="17-09-2026">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" aria-hidden="true" class="lucide lucide-calendar w-3.5 h-3.5 text-gray-500 absolute right-3 top-3 pointer-events-none"><path d="M8 2v3"></path><path d="M16 2v3"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path></svg>
+</div>
+</div>
+<div>
+<label class="block text-[10px] text-gray-500 font-medium uppercase mb-1">Time</label>
+<div class="relative">
+<input class="w-full bg-[#f6f4ed] border-0 rounded-lg px-3 py-2.5 text-xs text-gray-800 font-medium focus:ring-1 focus:ring-[#e95a35]" type="text" value="19:28">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock w-3.5 h-3.5 text-gray-500 absolute right-3 top-3 pointer-events-none"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Submit Action Button -->
+<button class="w-full bg-[#e95a35] hover:bg-[#d84d28] text-white font-semibold py-3 rounded-lg text-xs tracking-wide transition shadow-sm flex items-center justify-center gap-1">
+<span class="">Search cabs</span>
+<span class="">•</span>
+<span class="">from ₹540*</span>
+</button>
+<!-- Status & Reassurance Footer -->
+<p class="text-[11px] text-center text-gray-500">
+            Your route is ready. Live cab availability will be connected here.
+          </p>
+<div class="pt-2 border-t border-gray-100 flex items-center justify-between text-[10px] text-gray-500 font-medium px-1">
+<span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-3 h-3 text-emerald-600"><path d="M20 6 9 17l-5-5"></path></svg> Verified drivers</span>
+<span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-3 h-3 text-emerald-600"><path d="M20 6 9 17l-5-5"></path></svg> Clear estimates</span>
+<span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-3 h-3 text-emerald-600"><path d="M20 6 9 17l-5-5"></path></svg> 24/7 booking</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Hero Graphic Banner -->
+<div class="lg:col-span-6 relative mt-4 lg:mt-0">
+<div class="rounded-2xl overflow-hidden shadow-xl relative aspect-[4/3] bg-neutral-900 border border-neutral-800">
+<img alt="Modern luxury car moving on dusk city road" class="w-full h-full object-cover brightness-90 contrast-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT63aSpJUcxmADYltxclHbQAASkjc8T99dh1i_c2hsjEp3FkpOxYpRYXVuVc2s7OTEKH3fcPw0pCpx7A8G0OBSnnb9teyCu9oTATciRNG1KEmBk83HTB7miUNZXLpxJsTwe8f7J0BrFUPjAfa4HCr2KIWcPcP-UXG61hAI410XgmoUZk9YvGrcwal-39n0ZVbN5fLkodmRXs_GIlp0dDRozfl7BaW31w1zxjUY9-YHz5xk43GRmSaPtw">
+<!-- Indicative Fare Pill Badge Overlay -->
+<div class="absolute bottom-5 left-5 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-xl shadow-lg border border-gray-100">
+<div class="text-[9px] uppercase tracking-wider font-semibold text-gray-500">Indicative Fare</div>
+<div class="text-sm font-bold text-gray-900 flex items-center gap-2">
+<span class="text-base font-extrabold text-black">₹680</span>
+<span class="text-gray-400 font-normal">|</span>
+<span class="text-xs text-gray-600 font-medium">32 min</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: StatsBanner -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 pb-16">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-white rounded-xl p-5 border border-[#e8e2d5] shadow-2xs">
+<div class="text-lg sm:text-xl font-bold text-gray-900">All India</div>
+<div class="text-xs text-gray-500 mt-0.5">Service coverage</div>
+</div>
+<div class="bg-white rounded-xl p-5 border border-[#e8e2d5] shadow-2xs">
+<div class="text-lg sm:text-xl font-bold text-gray-900">Multiple</div>
+<div class="text-xs text-gray-500 mt-0.5">Ride categories</div>
+</div>
+<div class="bg-white rounded-xl p-5 border border-[#e8e2d5] shadow-2xs">
+<div class="text-lg sm:text-xl font-bold text-gray-900">Upfront</div>
+<div class="text-xs text-gray-500 mt-0.5">Fare guidance</div>
+</div>
+<div class="bg-white rounded-xl p-5 border border-[#e8e2d5] shadow-2xs">
+<div class="text-lg sm:text-xl font-bold text-gray-900">24/7</div>
+<div class="text-xs text-gray-500 mt-0.5">Booking access</div>
+</div>
+</div>
+</section>
+<!-- END: StatsBanner -->
+<!-- BEGIN: DarkCategoriesSection -->
+<section class="bg-[#121316] text-white py-20 px-6 lg:px-12" id="rides">
+<div class="max-w-7xl mx-auto">
+<div class="mb-10">
+<span class="text-[11px] font-bold tracking-widest uppercase text-[#e95a35] block mb-2">How You Travel</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Pick the ride that fits the day</h2>
+</div>
+<!-- 4 Categories Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1 -->
+<div class="bg-[#1b1c20] hover:bg-[#202228] transition p-6 rounded-xl border border-white/5 flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-[#e95a35]/20 text-[#e95a35] flex items-center justify-center font-bold text-sm mb-6">
+              C
+            </div>
+<h3 class="text-base font-semibold text-white mb-2">City Cab</h3>
+<p class="text-xs text-gray-400 leading-relaxed">Quick point-to-point rides across town.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-[#1b1c20] hover:bg-[#202228] transition p-6 rounded-xl border border-white/5 flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-[#e95a35]/20 text-[#e95a35] flex items-center justify-center font-bold text-sm mb-6">
+              A
+            </div>
+<h3 class="text-base font-semibold text-white mb-2">Airport Transfer</h3>
+<p class="text-xs text-gray-400 leading-relaxed">Scheduled pickups with room for luggage.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-[#1b1c20] hover:bg-[#202228] transition p-6 rounded-xl border border-white/5 flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-[#e95a35]/20 text-[#e95a35] flex items-center justify-center font-bold text-sm mb-6">
+              I
+            </div>
+<h3 class="text-base font-semibold text-white mb-2">Intercity</h3>
+<p class="text-xs text-gray-400 leading-relaxed">Comfortable long-distance travel between cities.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-[#1b1c20] hover:bg-[#202228] transition p-6 rounded-xl border border-white/5 flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-[#e95a35]/20 text-[#e95a35] flex items-center justify-center font-bold text-sm mb-6">
+              P
+            </div>
+<h3 class="text-base font-semibold text-white mb-2">Premium</h3>
+<p class="text-xs text-gray-400 leading-relaxed">Executive vehicles for business and special days.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: DarkCategoriesSection -->
+<!-- BEGIN: FleetSection -->
+<section class="py-20 px-6 lg:px-12 max-w-7xl mx-auto" id="fleet">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<span class="text-[11px] font-bold tracking-widest uppercase text-[#e95a35] block mb-2">The Fleet</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">Vehicles for every journey</h2>
+</div>
+<p class="text-xs text-gray-500 max-w-xs text-left md:text-right">
+        Example estimates for a 15 km city ride. Final fare depends on route, city, and time.
+      </p>
+</div>
+<!-- Fleet Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Hatchback -->
+<div class="bg-[#f0ebe1] rounded-2xl overflow-hidden border border-[#e5ded0] flex flex-col transition hover:shadow-md group">
+<div class="h-52 flex items-center justify-center relative bg-gradient-to-b from-[#fdf2ee] via-[#fbf6f0] to-[#f0ebe1] overflow-hidden"><img alt="White Modern Hatchback" class="w-full h-48 object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1Omd05bGxQujDoLtiTn3Ck9Fm1eEbkNgQGqv9lclh2D2LrH4ibxK09o9OOgI-CB4J1Yc_JYO3YUGfx2uac8u73d_Tlu978QYio1KIpUM2wfMKazLOoDL1wwD0ndPRb2vsVkHzdaZotGKkj-NdI2bBKh2_RejBKeVvKb60mdCcAertRX2pScXe_4ENPVXOow7cw88UETXWs4ctj0BNtt8hkhinug5n0RR3V2qhYVVvPRUOnDsbn_r5rA"></div>
+<div class="p-6 bg-white border-t border-[#ede7db] mt-auto">
+<div class="flex items-center justify-between text-xs text-gray-500 mb-1">
+<span class="font-bold text-base text-gray-900">Hatchback</span>
+<span class="text-[11px]">Compact • 4 seats</span>
+</div>
+<div class="text-lg font-extrabold text-gray-900 mt-2">
+            ₹540 <span class="text-xs font-normal text-gray-500">/ 15 km*</span>
+</div>
+</div>
+</div>
+<!-- Sedan (Most Booked) -->
+<div class="bg-[#f0ebe1] rounded-2xl overflow-hidden border border-[#e5ded0] flex flex-col transition hover:shadow-md relative group">
+<div class="h-52 flex items-center justify-center relative bg-gradient-to-b from-[#fdf2ee] via-[#fbf6f0] to-[#f0ebe1] overflow-hidden"><span class="absolute top-4 left-4 z-10 bg-[#e95a35] text-white text-[9px] uppercase font-bold tracking-wider px-2 py-0.5 rounded shadow-xs">Most Booked</span><img alt="Modern Executive Metallic Grey Sedan Car" class="w-full h-48 object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA0llLLMGpUv90wmwy5g6Ze9FynFYQF8Nb9I_EmUFQ3Kps-xNMLTNFQUVLvlcO2n9xm_Wk5L3eDI0ryiJyDXI_sMavebb2g2GF9OCs-8am-AENy7M42CXSiwOOw8EaK8GJo9sZeqmsS9MDhV5dRk5BZhlKvk6uvjbfOB38A0WBdrblOKEbBL7jlIz6SxYPycQP5bDLYiXIrjCXmehMRllk-T2OPGHTbrpEMAvkUGreMCo8GlDUkVDnog"></div>
+<div class="p-6 bg-white border-t border-[#ede7db] mt-auto">
+<div class="flex items-center justify-between text-xs text-gray-500 mb-1">
+<span class="font-bold text-base text-gray-900">Sedan</span>
+<span class="text-[11px]">Comfort • 4 seats</span>
+</div>
+<div class="text-lg font-extrabold text-gray-900 mt-2">
+            ₹720 <span class="text-xs font-normal text-gray-500">/ 15 km*</span>
+</div>
+</div>
+</div>
+<!-- Premium SUV -->
+<div class="bg-[#f0ebe1] rounded-2xl overflow-hidden border border-[#e5ded0] flex flex-col transition hover:shadow-md group">
+<div class="h-52 flex items-center justify-center relative bg-gradient-to-b from-[#fdf2ee] via-[#fbf6f0] to-[#f0ebe1] overflow-hidden"><img alt="Modern Premium Metallic Silver Luxury SUV Car" class="w-full h-48 object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCmGLXpVB9c_kMzVeIAx60j4qKzgjtrWN_q1Avzhqu1UlzpSyd1I7fgWfT3CwElM82gO2qIzwX_2n4vddedkXyZ7Mcy5YYXbkfW0KuaPZIn451Rx1JsK8yPtSTZGpWxiOlH7xA-osZTchanPoScAo4wr6czXs77kj3sQw-t3AzQEwlJbuiQY-G9i8xMltk2F_pfjDJq5xC1A8YnPj4bf4UfVKUxwi0Yty84Hd-j6TmoCdd3e6TkofS7w"></div>
+<div class="p-6 bg-white border-t border-[#ede7db] mt-auto">
+<div class="flex items-center justify-between text-xs text-gray-500 mb-1">
+<span class="font-bold text-base text-gray-900">Premium SUV</span>
+<span class="text-[11px]">Spacious • 6 seats</span>
+</div>
+<div class="text-lg font-extrabold text-gray-900 mt-2">
+            ₹1,180 <span class="text-xs font-normal text-gray-500">/ 15 km*</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FleetSection -->
+<!-- BEGIN: TrustSection -->
+<section class="py-16 px-6 lg:px-12 max-w-7xl mx-auto" id="why-us">
+<div class="mb-10 max-w-2xl">
+<span class="text-[11px] font-bold tracking-widest uppercase text-[#e95a35] block mb-2">Why RYDO MOBILITY</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">Built around trust and comfort</h2>
+<p class="text-xs sm:text-sm text-gray-600 mt-2">
+        We combine verified drivers, clear pricing, and nationwide coverage so you can book with confidence.
+      </p>
+</div>
+<!-- 6 Benefits Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+<!-- Item 1 -->
+<div class="bg-white p-6 rounded-xl border border-[#e8e2d5] shadow-2xs">
+<div class="w-8 h-8 rounded-lg bg-[#fcf2ed] text-[#e95a35] flex items-center justify-center mb-4">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" aria-hidden="true" class="lucide lucide-shield-check w-4 h-4"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+</div>
+<h3 class="text-sm font-bold text-gray-900 mb-1">Verified drivers</h3>
+<p class="text-xs text-gray-500 leading-relaxed">Every driver is identity-checked and reviewed for a safe, respectful ride.</p>
+</div>
+<!-- Item 2 -->
+<div class="bg-white p-6 rounded-xl border border-[#e8e2d5] shadow-2xs">
+<div class="w-8 h-8 rounded-lg bg-[#fcf2ed] text-[#e95a35] flex items-center justify-center mb-4">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="banknote" aria-hidden="true" class="lucide lucide-banknote w-4 h-4"><rect width="20" height="12" x="2" y="6" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>
+</div>
+<h3 class="text-sm font-bold text-gray-900 mb-1">Upfront fares</h3>
+<p class="text-xs text-gray-500 leading-relaxed">See an indicative estimate before you book. No hidden charges, no haggling.</p>
+</div>
+<!-- Item 3 -->
+<div class="bg-white p-6 rounded-xl border border-[#e8e2d5] shadow-2xs">
+<div class="w-8 h-8 rounded-lg bg-[#fcf2ed] text-[#e95a35] flex items-center justify-center mb-4">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-4 h-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+</div>
+<h3 class="text-sm font-bold text-gray-900 mb-1">All-India coverage</h3>
+<p class="text-xs text-gray-500 leading-relaxed">From Faridabad to Goa, book city cabs and outstation trips across the country.</p>
+</div>
+<!-- Item 4 -->
+<div class="bg-white p-6 rounded-xl border border-[#e8e2d5] shadow-2xs">
+<div class="w-8 h-8 rounded-lg bg-[#fcf2ed] text-[#e95a35] flex items-center justify-center mb-4">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="headphones" aria-hidden="true" class="lucide lucide-headphones w-4 h-4"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg>
+</div>
+<h3 class="text-sm font-bold text-gray-900 mb-1">24/7 support</h3>
+<p class="text-xs text-gray-500 leading-relaxed">Our team is available round the clock to help with bookings and trip issues.</p>
+</div>
+<!-- Item 5 -->
+<div class="bg-white p-6 rounded-xl border border-[#e8e2d5] shadow-2xs">
+<div class="w-8 h-8 rounded-lg bg-[#fcf2ed] text-[#e95a35] flex items-center justify-center mb-4">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock-3" aria-hidden="true" class="lucide lucide-clock-3 w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6h4"></path></svg>
+</div>
+<h3 class="text-sm font-bold text-gray-900 mb-1">On-time pickup</h3>
+<p class="text-xs text-gray-500 leading-relaxed">We track your schedule so your cab is ready when you are.</p>
+</div>
+<!-- Item 6 -->
+<div class="bg-white p-6 rounded-xl border border-[#e8e2d5] shadow-2xs">
+<div class="w-8 h-8 rounded-lg bg-[#fcf2ed] text-[#e95a35] flex items-center justify-center mb-4">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="award" aria-hidden="true" class="lucide lucide-award w-4 h-4"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+</div>
+<h3 class="text-sm font-bold text-gray-900 mb-1">Quality fleet</h3>
+<p class="text-xs text-gray-500 leading-relaxed">Clean, air-conditioned vehicles maintained to keep every journey comfortable.</p>
+</div>
+</div>
+</section>
+<!-- END: TrustSection -->
+<!-- BEGIN: HowItWorksSection -->
+<section class="bg-[#121316] text-white py-20 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto">
+<div class="mb-10">
+<span class="text-[11px] font-bold tracking-widest uppercase text-[#e95a35] block mb-2">How It Works</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Book a cab in three steps</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<!-- Step 1 -->
+<div class="bg-[#1b1c20] p-7 rounded-2xl border border-white/5 space-y-4">
+<div class="text-2xl font-black text-[#e95a35]">01</div>
+<div class="w-7 h-7 rounded bg-[#2a2c33] flex items-center justify-center text-gray-300">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-4 h-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+</div>
+<div>
+<h3 class="text-base font-bold text-white mb-2">Enter your route</h3>
+<p class="text-xs text-gray-400 leading-relaxed">Share pickup, drop, date, and time in the booking panel.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-[#1b1c20] p-7 rounded-2xl border border-white/5 space-y-4">
+<div class="text-2xl font-black text-[#e95a35]">02</div>
+<div class="w-7 h-7 rounded bg-[#2a2c33] flex items-center justify-center text-gray-300">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="car" aria-hidden="true" class="lucide lucide-car w-4 h-4"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><path d="M9 17h6"></path><circle cx="17" cy="17" r="2"></circle></svg>
+</div>
+<div>
+<h3 class="text-base font-bold text-white mb-2">Choose your cab</h3>
+<p class="text-xs text-gray-400 leading-relaxed">Compare hatchbacks, sedans, and SUVs with clear indicative fares.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-[#1b1c20] p-7 rounded-2xl border border-white/5 space-y-4">
+<div class="text-2xl font-black text-[#e95a35]">03</div>
+<div class="w-7 h-7 rounded bg-[#2a2c33] flex items-center justify-center text-gray-300">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="refresh-cw" aria-hidden="true" class="lucide lucide-refresh-cw w-4 h-4"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>
+</div>
+<div>
+<h3 class="text-base font-bold text-white mb-2">Travel hassle-free</h3>
+<p class="text-xs text-gray-400 leading-relaxed">A verified driver arrives on time and takes you to your destination.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HowItWorksSection -->
+<!-- BEGIN: CoverageSection -->
+<section class="py-20 px-6 lg:px-12 max-w-7xl mx-auto" id="cities">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<span class="text-[11px] font-bold tracking-widest uppercase text-[#e95a35] block mb-2">Coverage</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">Cities we serve across India</h2>
+</div>
+<p class="text-xs text-gray-500 max-w-xs text-left md:text-right">
+        Expanding network of city cabs and outstation routes from Faridabad to the rest of the country.
+      </p>
+</div>
+<!-- City Pills Grid -->
+<div class="flex flex-wrap gap-2.5">
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Delhi NCR</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Mumbai</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Bangalore</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Hyderabad</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Chennai</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Pune</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Jaipur</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Ahmedabad</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Chandigarh</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Lucknow</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Kolkata</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Goa</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Indore</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Nagpur</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Bhopal</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Patna</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Faridabad</span>
+<span class="bg-white border border-[#e8e2d5] text-xs font-medium px-4 py-2 rounded-full text-gray-700 shadow-2xs hover:border-gray-400 transition cursor-default">Gurugram</span>
+</div>
+</section>
+<!-- END: CoverageSection -->
+<!-- BEGIN: TestimonialsSection -->
+<section class="py-12 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="mb-10">
+<span class="text-[11px] font-bold tracking-widest uppercase text-[#e95a35] block mb-2">Reviews</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">What riders say</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Review 1 -->
+<div class="bg-white p-7 rounded-2xl border border-[#e8e2d5] shadow-2xs flex flex-col justify-between">
+<div class="space-y-4">
+<div class="text-[#e95a35] text-2xl font-serif leading-none">“</div>
+<p class="text-xs text-gray-600 leading-relaxed">
+            RYDO MOBILITY made my airport transfer completely stress-free. The driver was punctual and the car was spotless.
+          </p>
+</div>
+<div class="flex items-center gap-3 pt-6">
+<div class="w-8 h-8 rounded-full bg-[#fdf2ee] text-[#e95a35] font-semibold text-xs flex items-center justify-center">
+            R
+          </div>
+<div>
+<div class="text-xs font-bold text-gray-900">Rohit Sharma</div>
+<div class="text-[10px] text-gray-400">Faridabad</div>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-white p-7 rounded-2xl border border-[#e8e2d5] shadow-2xs flex flex-col justify-between">
+<div class="space-y-4">
+<div class="text-[#e95a35] text-2xl font-serif leading-none">“</div>
+<p class="text-xs text-gray-600 leading-relaxed">
+            I book intercity cabs for family trips regularly. The fares are transparent and the support team is genuinely helpful.
+          </p>
+</div>
+<div class="flex items-center gap-3 pt-6">
+<div class="w-8 h-8 rounded-full bg-[#fdf2ee] text-[#e95a35] font-semibold text-xs flex items-center justify-center">
+            P
+          </div>
+<div>
+<div class="text-xs font-bold text-gray-900">Priya Menon</div>
+<div class="text-[10px] text-gray-400">Bangalore</div>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-white p-7 rounded-2xl border border-[#e8e2d5] shadow-2xs flex flex-col justify-between">
+<div class="space-y-4">
+<div class="text-[#e95a35] text-2xl font-serif leading-none">“</div>
+<p class="text-xs text-gray-600 leading-relaxed">
+            Reliable service across multiple cities. The booking process is simple and the drivers are professional.
+          </p>
+</div>
+<div class="flex items-center gap-3 pt-6">
+<div class="w-8 h-8 rounded-full bg-[#fdf2ee] text-[#e95a35] font-semibold text-xs flex items-center justify-center">
+            A
+          </div>
+<div>
+<div class="text-xs font-bold text-gray-900">Amit Patel</div>
+<div class="text-[10px] text-gray-400">Ahmedabad</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TestimonialsSection -->
+<!-- BEGIN: FAQSection -->
+<section class="py-20 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- FAQ Left Header -->
+<div class="lg:col-span-4">
+<span class="text-[11px] font-bold tracking-widest uppercase text-[#e95a35] block mb-2">FAQ</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">Questions &amp; answers</h2>
+<p class="text-xs text-gray-500 mt-2">Everything you need to know before booking your first ride with us.</p>
+</div>
+<!-- FAQ Accordion List -->
+<div class="lg:col-span-8 space-y-3">
+<!-- Accordion 1 -->
+<details class="group bg-white rounded-xl border border-[#e8e2d5] overflow-hidden transition">
+<summary class="flex justify-between items-center p-4 cursor-pointer text-xs font-semibold text-gray-900 hover:text-[#e95a35]">
+<span class="">How do I book a cab with RYDO MOBILITY?</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-4 h-4 text-gray-400 transition transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+</summary>
+<div class="px-4 pb-4 pt-1 text-xs text-gray-500 border-t border-gray-50 leading-relaxed">
+            Enter your pickup, drop, travel dates, and select a car class. You can confirm your cab with indicative fares and receive immediate booking assistance.
+          </div>
+</details>
+<!-- Accordion 2 -->
+<details class="group bg-white rounded-xl border border-[#e8e2d5] overflow-hidden transition">
+<summary class="flex justify-between items-center p-4 cursor-pointer text-xs font-semibold text-gray-900 hover:text-[#e95a35]">
+<span class="">Are the fares shown final?</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-4 h-4 text-gray-400 transition transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+</summary>
+<div class="px-4 pb-4 pt-1 text-xs text-gray-500 border-t border-gray-50 leading-relaxed">
+            The fares presented are upfront indicative estimates based on standard distance and duration. Tolls, state taxes, and parking fees are charged transparently based on actual usage.
+          </div>
+</details>
+<!-- Accordion 3 -->
+<details class="group bg-white rounded-xl border border-[#e8e2d5] overflow-hidden transition">
+<summary class="flex justify-between items-center p-4 cursor-pointer text-xs font-semibold text-gray-900 hover:text-[#e95a35]">
+<span class="">Can I book an outstation trip?</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-4 h-4 text-gray-400 transition transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+</summary>
+<div class="px-4 pb-4 pt-1 text-xs text-gray-500 border-t border-gray-50 leading-relaxed">
+            Yes, RYDO MOBILITY specializes in one-way and round-trip outstation journeys connecting major cities and rural hubs across India.
+          </div>
+</details>
+<!-- Accordion 4 -->
+<details class="group bg-white rounded-xl border border-[#e8e2d5] overflow-hidden transition">
+<summary class="flex justify-between items-center p-4 cursor-pointer text-xs font-semibold text-gray-900 hover:text-[#e95a35]">
+<span class="">How do I get driver details?</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-4 h-4 text-gray-400 transition transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+</summary>
+<div class="px-4 pb-4 pt-1 text-xs text-gray-500 border-t border-gray-50 leading-relaxed">
+            Driver information including contact details, vehicle registration number, and live status are dispatched via SMS and WhatsApp at least 2 hours prior to scheduled departure.
+          </div>
+</details>
+<!-- Accordion 5 -->
+<details class="group bg-white rounded-xl border border-[#e8e2d5] overflow-hidden transition">
+<summary class="flex justify-between items-center p-4 cursor-pointer text-xs font-semibold text-gray-900 hover:text-[#e95a35]">
+<span class="">What if I need to cancel?</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-4 h-4 text-gray-400 transition transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+</summary>
+<div class="px-4 pb-4 pt-1 text-xs text-gray-500 border-t border-gray-50 leading-relaxed">
+            We provide flexible cancellation terms. Free cancellations are available up to a designated time window before pickup. Reach out to our 24/7 helpline for quick assistance.
+          </div>
+</details>
+</div>
+</div>
+</section>
+<!-- END: FAQSection -->
+<!-- BEGIN: ContactSection -->
+<section class="py-12 px-6 lg:px-12 max-w-7xl mx-auto" id="contact">
+<div class="bg-[#121316] rounded-3xl p-8 sm:p-12 text-white border border-white/5 shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Left Contact Info -->
+<div class="lg:col-span-5 space-y-6">
+<div>
+<span class="text-[10px] font-bold tracking-widest uppercase text-[#e95a35] block mb-2">Contact</span>
+<h2 class="text-3xl font-bold tracking-tight text-white mb-2">Get in touch</h2>
+<p class="text-xs text-gray-400 leading-relaxed max-w-sm">
+              Need a custom corporate plan or have a trip question? Send us a message and we will respond quickly.
+            </p>
+</div>
+<div class="space-y-4 pt-2 text-xs">
+<!-- Phone -->
+<div class="flex items-start gap-3">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-[#e95a35] shrink-0 mt-0.5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+<div>
+<div class="text-gray-400 text-[11px]">Phone</div>
+<div class="text-white font-medium">+91 99999 99999</div>
+</div>
+</div>
+<!-- Email -->
+<div class="flex items-start gap-3">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" aria-hidden="true" class="lucide lucide-mail w-4 h-4 text-[#e95a35] shrink-0 mt-0.5"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+<div>
+<div class="text-gray-400 text-[11px]">Email</div>
+<div class="text-white font-medium">support@rydomobility.in</div>
+</div>
+</div>
+<!-- Address -->
+<div class="flex items-start gap-3">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-4 h-4 text-[#e95a35] shrink-0 mt-0.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+<div>
+<div class="text-gray-400 text-[11px]">Office</div>
+<div class="text-gray-300 leading-relaxed text-[11px]">
+                  House No. 79, Street No 4, Sai Nagar Part-2,<br>
+                  Near Basi Farm &amp; Kela Factory, Faridabad, Haryana 121002
+                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Contact Form -->
+<div class="lg:col-span-7">
+<form class="space-y-4 text-xs" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-[10px] uppercase font-bold text-gray-400 tracking-wider mb-1.5">Name</label>
+<input class="w-full bg-[#1b1c20] border border-white/10 rounded-lg px-3.5 py-3 text-xs text-white placeholder:text-gray-500 focus:border-[#e95a35] focus:ring-0" placeholder="Your name" type="text">
+</div>
+<div>
+<label class="block text-[10px] uppercase font-bold text-gray-400 tracking-wider mb-1.5">Phone</label>
+<input class="w-full bg-[#1b1c20] border border-white/10 rounded-lg px-3.5 py-3 text-xs text-white placeholder:text-gray-500 focus:border-[#e95a35] focus:ring-0" placeholder="+91 00000 00000" type="text">
+</div>
+</div>
+<div>
+<label class="block text-[10px] uppercase font-bold text-gray-400 tracking-wider mb-1.5">Message</label>
+<textarea class="w-full bg-[#1b1c20] border border-white/10 rounded-lg px-3.5 py-3 text-xs text-white placeholder:text-gray-500 focus:border-[#e95a35] focus:ring-0" placeholder="How can we help?" rows="4"></textarea>
+</div>
+<button class="w-full bg-[#e95a35] hover:bg-[#d84d28] text-white font-semibold py-3 rounded-lg text-xs tracking-wide transition shadow-md" type="submit">
+              Send message
+            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ContactSection -->
+<!-- BEGIN: CallToActionBanner -->
+<section class="bg-[#e95a35] text-white py-8 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+<div>
+<h3 class="text-xl font-bold">Ready to ride?</h3>
+<p class="text-xs text-white/90">Book your city, airport, or outstation cab today.</p>
+</div>
+<a class="bg-white text-gray-900 hover:bg-gray-100 font-semibold px-6 py-2.5 rounded-lg text-xs shadow transition whitespace-nowrap" href="#booking">
+        Book now
+      </a>
+</div>
+</section>
+<!-- END: CallToActionBanner -->
+<!-- BEGIN: Footer -->
+<footer class="bg-[#f7f4ef] border-t border-[#ece6d9] pt-14 pb-8 text-xs text-gray-600">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-[#ece6d9]">
+<!-- Left Brand Info -->
+<div class="md:col-span-6 space-y-3">
+<div class="font-extrabold text-base tracking-wider text-black">RYDO MOBILITY</div>
+<p class="text-[11px] text-gray-500">City, airport, and intercity car rental service across India.</p>
+<div class="text-[11px] text-gray-500 leading-relaxed pt-2">
+            House No. 79, Street No 4, Sai Nagar Part-2,<br>
+            Near Basi Farm &amp; Kela Factory, Faridabad,<br>
+            Haryana 121002
+          </div>
+</div>
+<!-- Links 1 -->
+<div class="md:col-span-3 space-y-2">
+<div class="font-bold text-gray-900 text-xs mb-3">Explore</div>
+<div><a class="hover:text-black transition" href="#rides">Rides</a></div>
+<div><a class="hover:text-black transition" href="#fleet">Fleet</a></div>
+<div><a class="hover:text-black transition" href="#why-us">Why us</a></div>
+<div><a class="hover:text-black transition" href="#cities">Cities</a></div>
+<div><a class="hover:text-black transition" href="#contact">Contact</a></div>
+</div>
+<!-- Links 2 -->
+<div class="md:col-span-3 space-y-2">
+<div class="font-bold text-gray-900 text-xs mb-3">Support</div>
+<div><a class="hover:text-black transition" href="#faq">FAQ</a></div>
+<div><a class="hover:text-black transition" href="#reviews">Reviews</a></div>
+<div><a class="hover:text-black transition" href="#how-it-works">How it works</a></div>
+<div><a class="hover:text-black transition" href="#contact">Contact us</a></div>
+</div>
+</div>
+<!-- Copyright Subfooter -->
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[10px] text-gray-400 gap-2">
+<div class="">© 2026 RYDO MOBILITY. All rights reserved.</div>
+<div class="">Fares and vehicle availability may vary by route and time.</div>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+<script data-purpose="init-icons">
+    // Initialize Lucide icon library
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    });
+  </script>
+
+
+</body></html>

@@ -1,0 +1,840 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head><style id="theme-palette-override">:root { --vermilion: #eb5b37; --vermilion-hover: #d84d28; --vermilion-tint: #fdf2ee; } .bg-crimson-vibrant { background-color: #eb5b37 !important; } .hover\:bg-crimson-deep:hover, .hover\:bg-crimson-vibrant:hover { background-color: #d84d28 !important; } .text-crimson-vibrant, .text-primary { color: #eb5b37 !important; } .border-crimson-vibrant, .border-primary { border-color: #eb5b37 !important; } .bg-crimson-tint { background-color: #fdf2ee !important; } .hover\:bg-crimson-tint:hover, .hover\:bg-crimson-tint\/30:hover { background-color: #fdf2ee !important; } .text-crimson-tint { color: #eb5b37 !important; } .hover\:text-crimson-vibrant:hover, .group-hover\:text-primary:hover { color: #d84d28 !important; } .focus\:border-crimson-vibrant:focus { border-color: #eb5b37 !important; } .bg-primary { background-color: #eb5b37 !important; } .border-outline-variant { border-color: #fed7cd !important; } .city-pill:hover { border-color: #eb5b37 !important; background-color: #fdf2ee !important; } </style>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Pan-India Network &amp; Cities | RYDO MOBILITY</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "crimson-deep": "#8A1024",
+            "on-surface-variant": "#5d3f3e",
+            "slate-black": "#111315",
+            "crimson-vibrant": "#D4002A",
+            "on-secondary": "#ffffff",
+            "tertiary-container": "#bd3945",
+            "surface-subtle": "#F8F9FA",
+            "on-secondary-container": "#606366",
+            "tertiary-fixed-dim": "#ffb3b3",
+            "on-secondary-fixed-variant": "#44474a",
+            "primary": "#a6001f",
+            "secondary-fixed-dim": "#c5c6ca",
+            "error-container": "#ffdad6",
+            "primary-fixed-dim": "#ffb3b0",
+            "on-tertiary-fixed-variant": "#8d1326",
+            "on-primary-fixed-variant": "#93001a",
+            "tertiary-fixed": "#ffdad9",
+            "secondary-container": "#dee0e4",
+            "on-primary": "#ffffff",
+            "secondary": "#5c5f62",
+            "on-tertiary-container": "#ffe4e3",
+            "on-primary-container": "#ffe4e2",
+            "surface-bright": "#f8f9ff",
+            "surface-muted": "#EEF1F4",
+            "surface-base": "#FFFFFF",
+            "accent-success": "#0E8345",
+            "surface-container": "#eceef4",
+            "surface": "#f8f9ff",
+            "crimson-tint": "#FFF1F3",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#e7bdba",
+            "on-background": "#191c20",
+            "slate-charcoal": "#1A1D20",
+            "outline": "#926e6d",
+            "on-primary-fixed": "#410006",
+            "on-error": "#ffffff",
+            "border-strong": "#C7CCD4",
+            "primary-fixed": "#ffdad8",
+            "inverse-primary": "#ffb3b0",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#e1e2e6",
+            "inverse-surface": "#2e3136",
+            "primary-container": "#d4002a",
+            "surface-container-low": "#f2f3fa",
+            "on-secondary-fixed": "#191c1f",
+            "accent-gold": "#C59B27",
+            "tertiary": "#9c1f2f",
+            "inverse-on-surface": "#eff0f7",
+            "on-error-container": "#93000a",
+            "surface-dim": "#d8dae0",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#e1e2e9",
+            "background": "#f8f9ff",
+            "border-subtle": "#E2E5E9",
+            "surface-tint": "#bf0025",
+            "on-tertiary-fixed": "#400009",
+            "on-surface": "#191c20",
+            "surface-variant": "#e1e2e9",
+            "surface-container-high": "#e6e8ee"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter-mobile": "0.75rem",
+            "space-xs": "0.25rem",
+            "space-2xl": "4rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin": "2.5rem",
+            "margin-mobile": "1rem"
+          },
+          "fontFamily": {
+            "label-md": ["Montserrat"],
+            "headline-md": ["Montserrat"],
+            "headline-xl": ["Montserrat"],
+            "body-lg": ["Open Sans"],
+            "body-sm": ["Open Sans"],
+            "display-hero-mobile": ["Montserrat"],
+            "body-md": ["Open Sans"],
+            "headline-lg": ["Montserrat"],
+            "label-sm": ["Montserrat"],
+            "display-hero": ["Montserrat"],
+            "headline-sm": ["Montserrat"],
+            "headline-xl-mobile": ["Montserrat"],
+            "label-lg": ["Montserrat"]
+          },
+          "fontSize": {
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "display-hero-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-xl-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-[#f7f4ef] text-[#1c1e21] antialiased selection:bg-[#e95a35] selection:text-white min-h-screen flex flex-col">
+<!-- ================= TOP NAVIGATION BAR ================= -->
+<header class="w-full bg-[#f7f4ef]/95 backdrop-blur sticky top-0 z-50 border-b border-[#ece6d9]"><div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between"><a class="flex items-center gap-2 group" href="index.html"><span class="font-extrabold text-xl tracking-wider text-black">RYDO MOBILITY</span><span class="text-[10px] uppercase font-semibold text-gray-400 tracking-widest pl-1 border-l border-gray-300">Car Rental</span></a><nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700"><a class="hover:text-black transition" href="code1.html">Rides</a><a class="hover:text-black transition" href="code2.html">Fleet</a><a class="hover:text-black transition" href="code3.html">Why us</a><a class="text-black font-semibold border-b-2 border-[#e95a35] pb-0.5" href="code4.html">Cities</a><a class="hover:text-black transition" href="code5.html">Contact</a></nav><div class="flex items-center"><a class="bg-[#141416] hover:bg-black text-white text-xs font-semibold px-5 py-2.5 rounded-md transition shadow-sm" href="#booking">Get a ride</a></div></div></header>
+<main class="flex-grow">
+<!-- ================= HERO SECTION ================= -->
+<section class="relative bg-surface-container-lowest py-space-2xl border-b border-border-subtle overflow-hidden">
+<!-- Subtle Ambient Decorative Elements -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-crimson-tint rounded-full blur-3xl opacity-60 -mr-20 -mt-20 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+<!-- Hero Copy -->
+<div class="max-w-2xl text-left">
+<div class="inline-flex items-center gap-2 bg-crimson-tint px-3 py-1 rounded-full border border-outline-variant mb-space-md">
+<span class="w-2 h-2 rounded-full bg-crimson-vibrant animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-crimson-vibrant tracking-wider">NATIONWIDE CONNECTIVITY</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-slate-black leading-tight mb-space-md">
+              Pan-India Outstation &amp; Airport Chauffeur Network
+            </h1>
+<p class="font-body-lg text-body-lg text-secondary mb-space-lg max-w-xl">
+              Covering 120+ major cities, metro corridors, and 500+ pin codes across India with verified door-to-door reliability and zero hidden tolls.
+            </p>
+<!-- Search & Filter Bar -->
+<div class="bg-surface-base border border-border-strong rounded-xl p-2 shadow-md flex flex-col sm:flex-row items-center gap-2 max-w-xl">
+<div class="flex items-center gap-3 w-full px-3 py-2">
+<span class="material-symbols-outlined text-crimson-vibrant">search</span>
+<input class="w-full bg-transparent border-0 focus:ring-0 text-on-surface font-body-md text-body-md placeholder-secondary p-0 focus:outline-none" id="citySearchInput" placeholder="Check city, outstation corridor, or airport..." type="text">
+</div>
+<button class="w-full sm:w-auto bg-crimson-vibrant hover:bg-crimson-deep text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md whitespace-nowrap transition-colors duration-150 flex items-center justify-center gap-1.5 shadow-sm">
+<span class="">Check Coverage</span>
+</button>
+</div>
+<!-- Quick Metrics Badges -->
+<div class="grid grid-cols-3 gap-4 mt-space-lg pt-space-md border-t border-border-subtle">
+<div>
+<p class="font-headline-lg text-headline-lg font-bold text-slate-charcoal">120+</p>
+<p class="font-body-sm text-body-sm text-secondary">Operational Cities</p>
+</div>
+<div>
+<p class="font-headline-lg text-headline-lg font-bold text-slate-charcoal">500+</p>
+<p class="font-body-sm text-body-sm text-secondary">Pin Codes Covered</p>
+</div>
+<div>
+<p class="font-headline-lg text-headline-lg font-bold text-crimson-vibrant">100%</p>
+<p class="font-body-sm text-body-sm text-secondary">Fixed Fare Guarantee</p>
+</div>
+</div>
+</div>
+<!-- Hero Route Visualizer Preview -->
+<div class="w-full lg:w-5/12">
+<div class="bg-slate-charcoal rounded-2xl p-6 text-on-primary shadow-xl relative border border-slate-black">
+<div class="flex items-center justify-between border-b border-secondary/30 pb-4 mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-crimson-vibrant" style="font-variation-settings: 'FILL' 1;">hub</span>
+<span class="font-headline-sm text-headline-sm text-white">Central Operations Feed</span>
+</div>
+<span class="bg-accent-success/20 text-accent-success px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider">Active Status</span>
+</div>
+<!-- Real-time corridor ticker -->
+<div class="space-y-3">
+<div class="bg-slate-black/50 p-3.5 rounded-xl border border-secondary/20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-2.5 h-2.5 rounded-full bg-crimson-vibrant"></span>
+<div>
+<p class="font-label-md text-label-md text-white">Faridabad HQ → IGI T3 Airport</p>
+<p class="text-xs text-secondary-fixed-dim">Chauffeurs en route • 32 min avg dispatch</p>
+</div>
+</div>
+<span class="font-label-md text-white font-bold">₹999</span>
+</div>
+<div class="bg-slate-black/50 p-3.5 rounded-xl border border-secondary/20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-2.5 h-2.5 rounded-full bg-accent-success"></span>
+<div>
+<p class="font-label-md text-label-md text-white">Delhi ⇄ Jaipur Expressway</p>
+<p class="text-xs text-secondary-fixed-dim">Sedan &amp; SUV Fleet Available</p>
+</div>
+</div>
+<span class="font-label-md text-white font-bold">₹3,639</span>
+</div>
+<div class="bg-slate-black/50 p-3.5 rounded-xl border border-secondary/20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-2.5 h-2.5 rounded-full bg-accent-gold"></span>
+<div>
+<p class="font-label-md text-label-md text-white">Mumbai ⇄ Pune Expressway</p>
+<p class="text-xs text-secondary-fixed-dim">Toll Inclusive • Chauffeur Verified</p>
+</div>
+</div>
+<span class="font-label-md text-white font-bold">₹2,150</span>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-secondary/20 flex justify-between items-center text-xs text-secondary-fixed-dim">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-accent-gold text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+                  Door-to-door GPS Tracking
+                </span>
+<span class="font-medium text-white">24/7 Operations Desk</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= REGIONAL OPERATIONS HUBS ================= -->
+<section class="py-space-2xl max-w-7xl mx-auto px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<p class="font-label-sm text-label-sm text-crimson-vibrant uppercase tracking-widest mb-1">Strategic Operations</p>
+<h2 class="font-headline-xl text-headline-xl text-slate-black mb-3">Regional Network Hubs</h2>
+<p class="font-body-md text-body-md text-secondary">Dedicated zonal fleet centers handling intercity transfers, airport charters, and regional corporate deployments.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Hub 1: Delhi NCR & North Hub -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-border-subtle shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="p-2.5 bg-crimson-tint text-crimson-vibrant rounded-xl">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_city</span>
+</span>
+<span class="bg-slate-charcoal text-white text-[11px] font-bold px-2 py-0.5 rounded-full uppercase">Faridabad HQ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-slate-black mb-1">Delhi NCR &amp; North</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">Primary Command Center: Faridabad, Delhi, Gurugram, Noida, Ghaziabad.</p>
+<div class="border-t border-border-subtle pt-3 mb-4">
+<p class="font-label-sm text-label-sm text-slate-charcoal uppercase tracking-wider mb-2">Prime Intercity Corridors</p>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-secondary">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Delhi ⇄ Jaipur (NH48)</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Delhi ⇄ Agra (Yamuna Expy)</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Delhi ⇄ Chandigarh (NH44)</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> NCR ⇄ Dehradun &amp; Haridwar</li>
+</ul>
+</div>
+</div>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 group-hover:gap-2 transition-all" href="#directory">
+            Explore 38 Cities <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+<!-- Hub 2: Mumbai & Western Hub -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-border-subtle shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="p-2.5 bg-crimson-tint text-crimson-vibrant rounded-xl">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">commute</span>
+</span>
+<span class="bg-surface-muted text-slate-charcoal text-[11px] font-bold px-2 py-0.5 rounded-full uppercase">Western Hub</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-slate-black mb-1">Mumbai &amp; West Hub</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">Western Axis: Mumbai, Pune, Ahmedabad, Surat, Vadodara, Nashik.</p>
+<div class="border-t border-border-subtle pt-3 mb-4">
+<p class="font-label-sm text-label-sm text-slate-charcoal uppercase tracking-wider mb-2">Prime Intercity Corridors</p>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-secondary">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Mumbai ⇄ Pune Express</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Mumbai ⇄ Shirdi &amp; Nashik</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Ahmedabad ⇄ Surat &amp; Vadodara</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Mumbai / Pune ⇄ Goa Coastal</li>
+</ul>
+</div>
+</div>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 transition-all" href="#directory">
+            Explore 29 Cities <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+<!-- Hub 3: Bengaluru & Southern Hub -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-border-subtle shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="p-2.5 bg-crimson-tint text-crimson-vibrant rounded-xl">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">airport_shuttle</span>
+</span>
+<span class="bg-surface-muted text-slate-charcoal text-[11px] font-bold px-2 py-0.5 rounded-full uppercase">Southern Hub</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-slate-black mb-1">Bengaluru &amp; South</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">Tech &amp; Heritage Belt: Bengaluru, Hyderabad, Chennai, Mysuru, Coimbatore.</p>
+<div class="border-t border-border-subtle pt-3 mb-4">
+<p class="font-label-sm text-label-sm text-slate-charcoal uppercase tracking-wider mb-2">Prime Intercity Corridors</p>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-secondary">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Bengaluru ⇄ Mysuru Expy</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Bengaluru ⇄ Coorg &amp; Ooty</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Chennai ⇄ Tirupati &amp; Pondicherry</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Hyderabad ⇄ Vijayawada</li>
+</ul>
+</div>
+</div>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 transition-all" href="#directory">
+            Explore 32 Cities <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+<!-- Hub 4: Rajasthan & Heritage Circuit -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-border-subtle shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="p-2.5 bg-crimson-tint text-crimson-vibrant rounded-xl">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">tour</span>
+</span>
+<span class="bg-surface-muted text-slate-charcoal text-[11px] font-bold px-2 py-0.5 rounded-full uppercase">Heritage Hub</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-slate-black mb-1">Rajasthan &amp; Central</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">Royal &amp; Tourism Circuits: Jaipur, Udaipur, Jodhpur, Ajmer, Indore, Bhopal.</p>
+<div class="border-t border-border-subtle pt-3 mb-4">
+<p class="font-label-sm text-label-sm text-slate-charcoal uppercase tracking-wider mb-2">Prime Intercity Corridors</p>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-secondary">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Jaipur ⇄ Udaipur Golden Quad</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Jaipur ⇄ Jodhpur &amp; Jaisalmer</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Delhi ⇄ Ajmer Sharif / Pushkar</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm">near_me</span> Indore ⇄ Ujjain &amp; Omkareshwar</li>
+</ul>
+</div>
+</div>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 transition-all" href="#directory">
+            Explore 21 Cities <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ================= TOP OUTSTATION ROUTES TABLE ================= -->
+<section class="py-space-xl bg-surface-base border-y border-border-subtle">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+<div>
+<span class="font-label-sm text-label-sm text-crimson-vibrant uppercase tracking-wider">Clear Transparent Rates</span>
+<h2 class="font-headline-xl text-headline-xl text-slate-black mt-1">Top Outstation Corridors &amp; Indicative Fares</h2>
+</div>
+<p class="text-secondary font-body-sm text-body-sm mt-2 md:mt-0">Includes driver allowance, tolls, and verified safety inspection.</p>
+</div>
+<div class="overflow-x-auto rounded-xl border border-border-subtle shadow-sm bg-surface-container-lowest">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-muted text-slate-charcoal border-b border-border-strong font-label-md text-label-md uppercase tracking-wider text-[12px]">
+<th class="py-4 px-6">Origin City</th>
+<th class="py-4 px-6">Destination Hub</th>
+<th class="py-4 px-6">Distance &amp; Time</th>
+<th class="py-4 px-6">Vehicle Class</th>
+<th class="py-4 px-6">Indicative Starting Fare</th>
+<th class="py-4 px-6 text-right">Direct Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-body-md text-body-md text-slate-charcoal">
+<!-- Route 1 -->
+<tr class="hover:bg-crimson-tint/30 transition-colors">
+<td class="py-4 px-6 font-semibold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-crimson-vibrant"></span>
+                  Delhi NCR (Faridabad / Delhi)
+                </td>
+<td class="py-4 px-6 font-medium">Jaipur, Rajasthan</td>
+<td class="py-4 px-6 text-secondary text-sm">270 km • ~4.5 hrs (Expy)</td>
+<td class="py-4 px-6">
+<span class="px-2.5 py-1 rounded bg-surface-muted text-xs font-semibold text-slate-charcoal">Sedan (Dzire/Etios)</span>
+</td>
+<td class="py-4 px-6 font-headline-sm text-headline-sm text-primary font-bold">₹3,639*</td>
+<td class="py-4 px-6 text-right">
+<button class="bg-crimson-vibrant hover:bg-crimson-deep text-white px-4 py-1.5 rounded-full font-label-md text-label-md transition-colors inline-flex items-center gap-1 shadow-sm">
+<span class="">Book Route</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Route 2 -->
+<tr class="hover:bg-crimson-tint/30 transition-colors">
+<td class="py-4 px-6 font-semibold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-crimson-vibrant"></span>
+                  Delhi NCR / Gurugram
+                </td>
+<td class="py-4 px-6 font-medium">Agra (Taj Mahal Circuit)</td>
+<td class="py-4 px-6 text-secondary text-sm">210 km • ~3.5 hrs</td>
+<td class="py-4 px-6">
+<span class="px-2.5 py-1 rounded bg-surface-muted text-xs font-semibold text-slate-charcoal">Sedan (Dzire/Aura)</span>
+</td>
+<td class="py-4 px-6 font-headline-sm text-headline-sm text-primary font-bold">₹2,499*</td>
+<td class="py-4 px-6 text-right">
+<button class="bg-crimson-vibrant hover:bg-crimson-deep text-white px-4 py-1.5 rounded-full font-label-md text-label-md transition-colors inline-flex items-center gap-1 shadow-sm">
+<span class="">Book Route</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Route 3 -->
+<tr class="hover:bg-crimson-tint/30 transition-colors">
+<td class="py-4 px-6 font-semibold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-slate-charcoal"></span>
+                  Mumbai (All Areas)
+                </td>
+<td class="py-4 px-6 font-medium">Pune (City &amp; Hinjewadi)</td>
+<td class="py-4 px-6 text-secondary text-sm">150 km • ~3.0 hrs</td>
+<td class="py-4 px-6">
+<span class="px-2.5 py-1 rounded bg-surface-muted text-xs font-semibold text-slate-charcoal">Sedan / Ertiga SUV</span>
+</td>
+<td class="py-4 px-6 font-headline-sm text-headline-sm text-primary font-bold">₹2,150*</td>
+<td class="py-4 px-6 text-right">
+<button class="bg-crimson-vibrant hover:bg-crimson-deep text-white px-4 py-1.5 rounded-full font-label-md text-label-md transition-colors inline-flex items-center gap-1 shadow-sm">
+<span class="">Book Route</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Route 4 -->
+<tr class="hover:bg-crimson-tint/30 transition-colors">
+<td class="py-4 px-6 font-semibold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-slate-charcoal"></span>
+                  Bengaluru (Central / Whitefield)
+                </td>
+<td class="py-4 px-6 font-medium">Mysuru Palace Road</td>
+<td class="py-4 px-6 text-secondary text-sm">145 km • ~2.0 hrs (Expy)</td>
+<td class="py-4 px-6">
+<span class="px-2.5 py-1 rounded bg-surface-muted text-xs font-semibold text-slate-charcoal">Executive Sedan</span>
+</td>
+<td class="py-4 px-6 font-headline-sm text-headline-sm text-primary font-bold">₹2,800*</td>
+<td class="py-4 px-6 text-right">
+<button class="bg-crimson-vibrant hover:bg-crimson-deep text-white px-4 py-1.5 rounded-full font-label-md text-label-md transition-colors inline-flex items-center gap-1 shadow-sm">
+<span class="">Book Route</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Route 5 -->
+<tr class="hover:bg-crimson-tint/30 transition-colors">
+<td class="py-4 px-6 font-semibold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-slate-charcoal"></span>
+                  Chandigarh / Mohali
+                </td>
+<td class="py-4 px-6 font-medium">Delhi NCR (Drop Anywhere)</td>
+<td class="py-4 px-6 text-secondary text-sm">250 km • ~4.0 hrs</td>
+<td class="py-4 px-6">
+<span class="px-2.5 py-1 rounded bg-surface-muted text-xs font-semibold text-slate-charcoal">Sedan / Innova Crysta</span>
+</td>
+<td class="py-4 px-6 font-headline-sm text-headline-sm text-primary font-bold">₹3,100*</td>
+<td class="py-4 px-6 text-right">
+<button class="bg-crimson-vibrant hover:bg-crimson-deep text-white px-4 py-1.5 rounded-full font-label-md text-label-md transition-colors inline-flex items-center gap-1 shadow-sm">
+<span class="">Book Route</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Route 6 -->
+<tr class="hover:bg-crimson-tint/30 transition-colors">
+<td class="py-4 px-6 font-semibold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-crimson-vibrant"></span>
+                  Faridabad Sector Hub (HQ)
+                </td>
+<td class="py-4 px-6 font-medium">IGI Airport T1 / T2 / T3</td>
+<td class="py-4 px-6 text-secondary text-sm">38 km • ~45-55 mins</td>
+<td class="py-4 px-6">
+<span class="px-2.5 py-1 rounded bg-crimson-tint text-xs font-semibold text-crimson-vibrant">Dedicated Airport Cab</span>
+</td>
+<td class="py-4 px-6 font-headline-sm text-headline-sm text-primary font-bold">₹999*</td>
+<td class="py-4 px-6 text-right">
+<button class="bg-crimson-vibrant hover:bg-crimson-deep text-white px-4 py-1.5 rounded-full font-label-md text-label-md transition-colors inline-flex items-center gap-1 shadow-sm">
+<span class="">Book Route</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="text-xs text-secondary mt-3 italic">*Base estimates subject to peak corridor toll recalculations. All bookings feature verified commercial plated chauffeur vehicles.</p>
+</div>
+</section>
+<!-- ================= AIRPORT TRANSFER SPECIALIST SECTION ================= -->
+<section class="py-space-2xl bg-surface-subtle">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="bg-slate-black text-white rounded-3xl p-8 lg:p-12 relative overflow-hidden shadow-2xl">
+<!-- Background geometric accent -->
+<div class="absolute -right-16 -bottom-16 w-80 h-80 bg-crimson-vibrant/20 rounded-full blur-3xl"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7">
+<span class="inline-flex items-center gap-2 bg-crimson-vibrant text-white text-xs px-3 py-1 rounded-full uppercase font-bold tracking-wider mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">flight</span>
+                Terminal Guaranteed Transfers
+              </span>
+<h2 class="font-headline-xl text-headline-xl mb-4 font-bold">
+                Airport Chauffeurs With Live Flight Delay Tracking
+              </h2>
+<p class="text-secondary-fixed-dim font-body-md text-body-md mb-6 leading-relaxed">
+                Never wait at the curb. RYDO MOBILITY provides synchronized meet-and-greet services across all major domestic &amp; international terminals. Chauffeur schedules automatically calibrate to actual flight touch-down times.
+              </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-secondary/30 pt-6">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-crimson-vibrant text-2xl">schedule</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-white">Zero Wait Surcharge</h4>
+<p class="text-xs text-secondary-fixed-dim">Free 45-min hold period after touchdown.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-crimson-vibrant text-2xl">luggage</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-white">Luggage Assistance</h4>
+<p class="text-xs text-secondary-fixed-dim">Dedicated boot space for excess baggage.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-crimson-vibrant text-2xl">badge</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-white">Nameboard Pickup</h4>
+<p class="text-xs text-secondary-fixed-dim">Paging board at designated arrivals gate.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Airport Cards -->
+<div class="lg:col-span-5 space-y-3">
+<div class="bg-slate-charcoal/80 border border-secondary/20 p-4 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-crimson-vibrant text-2xl">local_airport</span>
+<div>
+<h5 class="font-headline-sm text-headline-sm text-white">Delhi (DEL) - IGI T1, T2 &amp; T3</h5>
+<p class="text-xs text-secondary-fixed-dim">Priority terminal pick-up bays with gate coordination</p>
+</div>
+</div>
+<span class="text-xs bg-crimson-vibrant px-2.5 py-1 rounded text-white font-bold">24/7 Desk</span>
+</div>
+<div class="bg-slate-charcoal/80 border border-secondary/20 p-4 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-crimson-vibrant text-2xl">local_airport</span>
+<div>
+<h5 class="font-headline-sm text-headline-sm text-white">Mumbai (BOM) - T1 &amp; T2</h5>
+<p class="text-xs text-secondary-fixed-dim">Direct multi-level car park staging</p>
+</div>
+</div>
+<span class="text-xs bg-crimson-vibrant px-2.5 py-1 rounded text-white font-bold">24/7 Desk</span>
+</div>
+<div class="bg-slate-charcoal/80 border border-secondary/20 p-4 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-crimson-vibrant text-2xl">local_airport</span>
+<div>
+<h5 class="font-headline-sm text-headline-sm text-white">Bengaluru (BLR) - Kempegowda T1 &amp; T2</h5>
+<p class="text-xs text-secondary-fixed-dim">Fast-track airport expressway link</p>
+</div>
+</div>
+<span class="text-xs bg-crimson-vibrant px-2.5 py-1 rounded text-white font-bold">24/7 Desk</span>
+</div>
+<div class="bg-slate-charcoal/80 border border-secondary/20 p-4 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-crimson-vibrant text-2xl">local_airport</span>
+<div>
+<h5 class="font-headline-sm text-headline-sm text-white">Hyderabad (HYD) - RGIA Shamshabad</h5>
+<p class="text-xs text-secondary-fixed-dim">Dedicated PVNR Expressway fleets</p>
+</div>
+</div>
+<span class="text-xs bg-crimson-vibrant px-2.5 py-1 rounded text-white font-bold">24/7 Desk</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= INTERACTIVE CITY DIRECTORY ================= -->
+<section class="py-space-2xl max-w-7xl mx-auto px-margin" id="directory">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+<div>
+<span class="font-label-sm text-label-sm text-crimson-vibrant uppercase tracking-wider">Comprehensive Index</span>
+<h2 class="font-headline-xl text-headline-xl text-slate-black mt-1">120+ Operational Cities Directory</h2>
+<p class="font-body-md text-body-md text-secondary mt-1">Click or tap any city to initiate a round-trip or one-way dispatch query.</p>
+</div>
+<!-- Filter Chips for Zones -->
+<div class="flex flex-wrap gap-2 mt-4 md:mt-0" id="zoneFilterContainer">
+<button class="zone-btn bg-slate-charcoal text-white text-xs px-3.5 py-1.5 rounded-full font-semibold transition-all" onclick="filterZone('all')">All Regions</button>
+<button class="zone-btn bg-surface-muted text-slate-charcoal hover:bg-border-subtle text-xs px-3.5 py-1.5 rounded-full font-semibold transition-all" onclick="filterZone('north')">North India</button>
+<button class="zone-btn bg-surface-muted text-slate-charcoal hover:bg-border-subtle text-xs px-3.5 py-1.5 rounded-full font-semibold transition-all" onclick="filterZone('west')">West India</button>
+<button class="zone-btn bg-surface-muted text-slate-charcoal hover:bg-border-subtle text-xs px-3.5 py-1.5 rounded-full font-semibold transition-all" onclick="filterZone('south')">South India</button>
+<button class="zone-btn bg-surface-muted text-slate-charcoal hover:bg-border-subtle text-xs px-3.5 py-1.5 rounded-full font-semibold transition-all" onclick="filterZone('central')">Central &amp; East</button>
+</div>
+</div>
+<!-- City Pills Grid -->
+<div class="bg-surface-container-lowest border border-border-subtle rounded-2xl p-6 sm:p-8 shadow-sm">
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3" id="cityListGrid">
+<!-- North Hub Cities -->
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="north" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Faridabad (HQ)</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="north" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Delhi NCR</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="north" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Gurugram</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="north" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Noida</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="north" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Chandigarh</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="north" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Dehradun</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="north" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Agra</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="north" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Shimla</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="north" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Haridwar</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="north" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Rishikesh</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="north" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Ludhiana</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="north" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Amritsar</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<!-- West Hub Cities -->
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="west" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Mumbai</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="west" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Pune</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="west" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Ahmedabad</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="west" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Surat</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="west" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Vadodara</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="west" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Nashik</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="west" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Goa (North &amp; South)</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="west" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Shirdi</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="west" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Rajkot</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="west" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Kolhapur</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<!-- South Hub Cities -->
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="south" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Bengaluru</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="south" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Hyderabad</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="south" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Chennai</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="south" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Mysuru</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="south" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Coimbatore</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="south" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Kochi (Cochin)</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="south" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Tirupati</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="south" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Vijayawada</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="south" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Madurai</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="south" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Mangaluru</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<!-- Central & East Hub Cities -->
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="central" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Jaipur</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="central" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Udaipur</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="central" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Jodhpur</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="central" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Lucknow</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="central" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Varanasi</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="central" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Kolkata</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="central" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Indore</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="central" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Bhopal</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="central" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Patna</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="central" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Bhubaneswar</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="central" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Nagpur</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+<a class="city-pill group p-2.5 rounded-lg border border-border-subtle hover:border-crimson-vibrant hover:bg-crimson-tint transition-all flex items-center justify-between" data-zone="central" href="#">
+<span class="font-label-md text-label-md text-slate-charcoal group-hover:text-primary font-medium">Ranchi</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:text-primary">north_east</span>
+</a>
+</div>
+<div class="mt-8 pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4">
+<p class="text-sm text-secondary">
+            Serving all tier-2 &amp; tier-3 satellite towns within 80km radius of designated hub nodes.
+          </p>
+<div class="flex items-center gap-2 text-xs font-semibold text-slate-charcoal">
+<span class="w-2 h-2 rounded-full bg-accent-success"></span>
+            All 120+ nodes staffed with 24/7 recovery fleets
+          </div>
+</div>
+</div>
+</section>
+<!-- ================= UNLISTED ROUTE & CUSTOM DISPATCH BANNER ================= -->
+<section class="py-space-2xl bg-surface-base border-t border-border-subtle" id="contact-section"><div class="max-w-7xl mx-auto px-margin"><div class="bg-slate-charcoal text-white rounded-3xl p-8 lg:p-12 shadow-2xl"><div class="grid grid-cols-1 lg:grid-cols-12 gap-10"><div class="lg:col-span-5 flex flex-col justify-between"><div><div class="inline-flex items-center gap-2 bg-crimson-vibrant/20 text-crimson-tint px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4"><span class="w-2 h-2 rounded-full bg-crimson-vibrant"></span>Custom Dispatch &amp; Inquiry</div><h3 class="font-headline-xl text-headline-xl font-bold mb-4 text-white">Get in touch</h3><p class="text-secondary-fixed-dim font-body-md mb-6">Have a customized intercity itinerary, airport fleet requirement, or corporate booking question? Our dispatch team in Faridabad responds in under 15 minutes.</p><div class="space-y-4 border-t border-secondary/30 pt-6 text-sm text-secondary-fixed-dim"><div class="flex items-start gap-3"><span class="material-symbols-outlined text-crimson-vibrant text-xl shrink-0 mt-0.5">location_on</span><span class=""><strong class="text-white block font-medium">Faridabad Central Hub:</strong>House No. 79, Street No 4, Sai Nagar Part-2, Near Basi Farm &amp; Kela Factory, Faridabad, Haryana 121002</span></div><div class="flex items-center gap-3"><span class="material-symbols-outlined text-crimson-vibrant text-xl shrink-0">phone_in_talk</span><div><strong class="text-white block font-medium">24/7 Operations Hotline:</strong><a class="hover:text-white text-crimson-tint font-bold transition-colors" href="tel:+919310632440">+91 93106 32440</a></div></div><div class="flex items-center gap-3"><span class="material-symbols-outlined text-crimson-vibrant text-xl shrink-0">mail</span><div><strong class="text-white block font-medium">Direct Support:</strong><span class="hover:text-white transition-colors">dispatch@rydomobility.com</span></div></div></div></div><div class="mt-8 pt-6 border-t border-secondary/20 flex items-center gap-2 text-xs text-secondary-fixed-dim"><span class="material-symbols-outlined text-accent-success text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>Licensed Intercity Commercial Transport Operator</div></div><div class="lg:col-span-7 bg-slate-black/60 p-6 sm:p-8 rounded-2xl border border-secondary/20"><h4 class="font-headline-sm text-headline-sm font-semibold mb-2 text-white">Send an Outstation Inquiry</h4><p class="text-xs text-secondary-fixed-dim mb-6">Fill out the details below and our reservations desk will share a transparent, zero-hidden-toll quotation immediately.</p><form class="space-y-4" onsubmit="event.preventDefault();"><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label class="block text-xs font-semibold text-secondary-fixed-dim uppercase tracking-wider mb-1.5">Full Name</label><input class="w-full bg-slate-charcoal border border-secondary/40 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-crimson-vibrant" placeholder="e.g. Rajesh Kumar" type="text"></div><div><label class="block text-xs font-semibold text-secondary-fixed-dim uppercase tracking-wider mb-1.5">Phone Number</label><input class="w-full bg-slate-charcoal border border-secondary/40 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-crimson-vibrant" placeholder="+91 98765 43210" type="tel"></div></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label class="block text-xs font-semibold text-secondary-fixed-dim uppercase tracking-wider mb-1.5">Pickup City / Hub</label><input class="w-full bg-slate-charcoal border border-secondary/40 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-crimson-vibrant" placeholder="e.g. Faridabad / Delhi" type="text"></div><div><label class="block text-xs font-semibold text-secondary-fixed-dim uppercase tracking-wider mb-1.5">Destination / Route</label><input class="w-full bg-slate-charcoal border border-secondary/40 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-crimson-vibrant" placeholder="e.g. Jaipur / Agra" type="text"></div></div><div><label class="block text-xs font-semibold text-secondary-fixed-dim uppercase tracking-wider mb-1.5">Requirements &amp; Notes</label><textarea class="w-full bg-slate-charcoal border border-secondary/40 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-crimson-vibrant" placeholder="Specify vehicle preference (Sedan / Innova / Fortuner), departure date, luggage requirements..." rows="3"></textarea></div><button class="w-full bg-crimson-vibrant hover:bg-crimson-deep text-white font-label-md text-label-md py-3.5 px-6 rounded-xl transition-colors duration-150 flex items-center justify-center gap-2 shadow-md" type="submit"><span class="material-symbols-outlined text-lg">send</span><span class="">Submit Itinerary Request</span></button></form></div></div></div></div></section><section class="bg-crimson-vibrant text-white py-12" style="background-color: rgb(235, 91, 55);"><div class="max-w-7xl mx-auto px-margin flex flex-col md:flex-row items-center justify-between gap-6"><div><h2 class="font-headline-xl text-headline-xl font-bold tracking-tight text-white mb-2">Ready to ride across 120+ cities?</h2><p class="font-body-md text-crimson-tint/90 max-w-xl">Experience zero-surge guarantees, clean executive vehicles, and professional verified chauffeurs for all your intercity journeys.</p></div><div class="flex items-center gap-4 shrink-0"><a class="bg-white text-slate-black hover:bg-surface-subtle font-label-md text-label-md px-6 py-3.5 rounded-full font-bold shadow-md transition-all flex items-center gap-2" href="tel:+919310632440"><span class="material-symbols-outlined text-lg">phone_in_talk</span><span class="">Call +91 93106 32440</span></a><button class="border border-white/40 hover:bg-white/10 text-white font-label-md text-label-md px-6 py-3.5 rounded-full font-semibold transition-all">Check Fleet</button></div></div></section>
+</main>
+<!-- ================= FOOTER ================= -->
+<footer class="bg-[#f7f4ef] border-t border-[#ece6d9] pt-14 pb-8 text-xs text-gray-600"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-[#ece6d9]"><div class="md:col-span-6 space-y-3"><div class="font-extrabold text-base tracking-wider text-black">RYDO MOBILITY</div><p class="text-[11px] text-gray-500">City, airport, and intercity car rental service across India.</p><div class="text-[11px] text-gray-500 leading-relaxed pt-2">House No. 79, Street No 4, Sai Nagar Part-2,<br>Near Basi Farm &amp; Kela Factory, Faridabad,<br>Haryana 121002</div></div><div class="md:col-span-3 space-y-2"><div class="font-bold text-gray-900 text-xs mb-3">Explore</div><div><a class="hover:text-black transition" href="code1.html">Rides</a></div><div><a class="hover:text-black transition" href="code2.html">Fleet</a></div><div><a class="hover:text-black transition" href="code3.html">Why us</a></div><div><a class="hover:text-black transition" href="code4.html">Cities</a></div><div><a class="hover:text-black transition" href="code5.html">Contact</a></div></div><div class="md:col-span-3 space-y-2"><div class="font-bold text-gray-900 text-xs mb-3">Support</div><div><a class="hover:text-black transition" href="index.html#faq">FAQ</a></div><div><a class="hover:text-black transition" href="index.html#reviews">Reviews</a></div><div><a class="hover:text-black transition" href="index.html#how-it-works">How it works</a></div><div><a class="hover:text-black transition" href="code3.html">Why us</a></div><div><a class="hover:text-black transition" href="code5.html">Contact us</a></div></div></div><div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[10px] text-gray-400 gap-2"><div class="">© 2026 RYDO MOBILITY. All rights reserved.</div><div class="">Fares and vehicle availability may vary by route and time.</div></div></div></footer>
+<!-- Simple Interactive Filtering & Search Script -->
+<script>
+    // Zone Filter Implementation
+    function filterZone(zone) {
+      const pills = document.querySelectorAll('.city-pill');
+      const buttons = document.querySelectorAll('.zone-btn');
+
+      // Update active button state
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-slate-charcoal', 'text-white');
+        btn.classList.add('bg-surface-muted', 'text-slate-charcoal');
+      });
+      event.target.classList.remove('bg-surface-muted', 'text-slate-charcoal');
+      event.target.classList.add('bg-slate-charcoal', 'text-white');
+
+      // Filter grid
+      pills.forEach(pill => {
+        if (zone === 'all' || pill.getAttribute('data-zone') === zone) {
+          pill.style.display = 'flex';
+        } else {
+          pill.style.display = 'none';
+        }
+      });
+    }
+
+    // Dynamic Live City Search
+    const searchInput = document.getElementById('citySearchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', function(e) {
+        const query = e.target.value.toLowerCase().trim();
+        const pills = document.querySelectorAll('.city-pill');
+
+        pills.forEach(pill => {
+          const cityName = pill.innerText.toLowerCase();
+          if (cityName.includes(query)) {
+            pill.style.display = 'flex';
+          } else {
+            pill.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
+
+
+</body></html>

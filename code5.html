@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact &amp; 24/7 Operations Desk | RYDO MOBILITY</title>
+  <!-- Material Symbols Outlined -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "crimson-deep": "#8A1024",
+            "on-surface-variant": "#5d3f3e",
+            "slate-black": "#111315",
+            "crimson-vibrant": "#D4002A",
+            "on-secondary": "#ffffff",
+            "tertiary-container": "#bd3945",
+            "surface-subtle": "#F8F9FA",
+            "on-secondary-container": "#606366",
+            "tertiary-fixed-dim": "#ffb3b3",
+            "on-secondary-fixed-variant": "#44474a",
+            "primary": "#a6001f",
+            "secondary-fixed-dim": "#c5c6ca",
+            "error-container": "#ffdad6",
+            "primary-fixed-dim": "#ffb3b0",
+            "on-tertiary-fixed-variant": "#8d1326",
+            "on-primary-fixed-variant": "#93001a",
+            "tertiary-fixed": "#ffdad9",
+            "secondary-container": "#dee0e4",
+            "on-primary": "#ffffff",
+            "secondary": "#5c5f62",
+            "on-tertiary-container": "#ffe4e3",
+            "on-primary-container": "#ffe4e2",
+            "surface-bright": "#f8f9ff",
+            "surface-muted": "#EEF1F4",
+            "surface-base": "#FFFFFF",
+            "accent-success": "#0E8345",
+            "surface-container": "#eceef4",
+            "surface": "#f8f9ff",
+            "crimson-tint": "#FFF1F3",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#e7bdba",
+            "on-background": "#191c20",
+            "slate-charcoal": "#1A1D20",
+            "outline": "#926e6d",
+            "on-primary-fixed": "#410006",
+            "on-error": "#ffffff",
+            "border-strong": "#C7CCD4",
+            "primary-fixed": "#ffdad8",
+            "inverse-primary": "#ffb3b0",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#e1e2e6",
+            "inverse-surface": "#2e3136",
+            "primary-container": "#d4002a",
+            "surface-container-low": "#f2f3fa",
+            "on-secondary-fixed": "#191c1f",
+            "accent-gold": "#C59B27",
+            "tertiary": "#9c1f2f",
+            "inverse-on-surface": "#eff0f7",
+            "on-error-container": "#93000a",
+            "surface-dim": "#d8dae0",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#e1e2e9",
+            "background": "#f8f9ff",
+            "border-subtle": "#E2E5E9",
+            "surface-tint": "#bf0025",
+            "on-tertiary-fixed": "#400009",
+            "on-surface": "#191c20",
+            "surface-variant": "#e1e2e9",
+            "surface-container-high": "#e6e8ee"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter-mobile": "0.75rem",
+            "space-xs": "0.25rem",
+            "space-2xl": "4rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin": "2.5rem",
+            "margin-mobile": "1rem"
+          },
+          "fontFamily": {
+            "label-md": ["Montserrat"],
+            "headline-md": ["Montserrat"],
+            "headline-xl": ["Montserrat"],
+            "body-lg": ["Open Sans"],
+            "body-sm": ["Open Sans"],
+            "display-hero-mobile": ["Montserrat"],
+            "body-md": ["Open Sans"],
+            "headline-lg": ["Montserrat"],
+            "label-sm": ["Montserrat"],
+            "display-hero": ["Montserrat"],
+            "headline-sm": ["Montserrat"],
+            "headline-xl-mobile": ["Montserrat"],
+            "label-lg": ["Montserrat"]
+          },
+          "fontSize": {
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "display-hero-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-xl-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+  <style id="theme-palette-override">
+    /* Warm vermilion/coral palette overrides */
+    .text-primary,
+    .text-crimson-vibrant,
+    a.text-crimson-vibrant {
+      color: #eb5b37 !important;
+    }
+
+    .hover\:text-crimson-deep:hover,
+    .hover\:text-crimson-vibrant:hover {
+      color: #d84d28 !important;
+    }
+
+    .bg-primary,
+    .bg-crimson-vibrant {
+      background-color: #eb5b37 !important;
+    }
+
+    .hover\:bg-crimson-deep:hover {
+      background-color: #d84d28 !important;
+    }
+
+    .bg-crimson-tint {
+      background-color: #fdf2ee !important;
+    }
+
+    .border-primary {
+      border-color: #eb5b37 !important;
+    }
+
+    .ring-crimson-tint {
+      --tw-ring-color: #fdf2ee !important;
+    }
+
+    .focus\:border-crimson-vibrant:focus {
+      border-color: #eb5b37 !important;
+    }
+
+    .focus\:ring-crimson-tint:focus {
+      --tw-ring-color: #fce7e1 !important;
+    }
+
+    .from-crimson-vibrant {
+      --tw-gradient-from: #eb5b37 var(--tw-gradient-from-position) !important;
+      --tw-gradient-to: rgb(235 91 55 / 0) var(--tw-gradient-to-position) !important;
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+    }
+
+    .to-crimson-deep {
+      --tw-gradient-to: #d84d28 var(--tw-gradient-to-position) !important;
+    }
+
+    .selection\:bg-primary::selection {
+      background-color: #eb5b37 !important;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-surface-subtle text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary selection:text-white">
+  <!-- TopNavBar (Shared Component) -->
+  <header class="w-full bg-[#f7f4ef]/95 backdrop-blur sticky top-0 z-50 border-b border-[#ece6d9]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between"><a
+        class="flex items-center gap-2 group" href="index.html"><span
+          class="font-extrabold text-xl tracking-wider text-black">RYDO MOBILITY</span><span
+          class="text-[10px] uppercase font-semibold text-gray-400 tracking-widest pl-1 border-l border-gray-300">Car
+          Rental</span></a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700"><a
+          class="hover:text-black transition" href="code1.html">Rides</a><a class="hover:text-black transition"
+          href="code2.html">Fleet</a><a class="hover:text-black transition" href="code3.html">Why us</a><a
+          class="hover:text-black transition" href="code4.html">Cities</a><a
+          class="text-black font-semibold border-b-2 border-[#e95a35] pb-0.5" href="code5.html">Contact</a></nav>
+      <div class="flex items-center"><a
+          class="bg-[#141416] hover:bg-black text-white text-xs font-semibold px-5 py-2.5 rounded-md transition shadow-sm"
+          href="#booking">Get a ride</a></div>
+    </div>
+  </header>
+  <!-- Main Content Container -->
+  <main class="flex-grow">
+    <!-- Hero Banner / Breadcrumb Header -->
+    <section class="bg-surface-base border-b border-border-subtle py-space-xl">
+      <div class="max-w-7xl mx-auto px-margin">
+        <div class="max-w-3xl">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-crimson-tint border border-outline-variant/30 text-primary font-label-sm text-label-sm uppercase tracking-wide mb-3">
+            <span class="w-2 h-2 rounded-full bg-crimson-vibrant animate-pulse"></span>
+            24/7 CUSTOMER &amp; DISPATCH SUPPORT
+          </div>
+          <h1 class="font-display-hero text-display-hero text-slate-black tracking-tight mb-3">
+            Get in touch with our operations team
+          </h1>
+          <p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+            Whether you need a custom corporate rental, outstation multi-city itinerary, or urgent trip assistance, our
+            round-the-clock dispatch desk is ready to help.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Operational Core Grid: Contact & Inquiries -->
+    <section class="max-w-7xl mx-auto px-margin py-space-xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- LEFT COLUMN: Contact & Dispatch Information (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          <!-- Dispatch HQ Card -->
+          <div
+            class="bg-surface-base border border-border-subtle rounded-xl p-6 shadow-sm hover:border-primary/40 transition-colors duration-200">
+            <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border-subtle">
+              <span class="w-10 h-10 rounded-lg bg-crimson-tint text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined">corporate_fare</span>
+              </span>
+              <div>
+                <h2 class="font-headline-sm text-headline-sm text-slate-black">Faridabad Registered Headquarters</h2>
+                <p class="font-body-sm text-body-sm text-secondary">Registered operations office &amp; fleet dispatch
+                </p>
+              </div>
+            </div>
+            <!-- Address -->
+            <div class="flex items-start gap-3.5 mb-5">
+              <span class="material-symbols-outlined text-primary text-xl mt-0.5">location_on</span>
+              <div>
+                <p class="font-label-md text-label-md text-slate-black">Primary Transit Hub</p>
+                <p class="font-body-md text-body-md text-secondary mt-0.5 leading-snug">
+                  House No. 79, Street No 4, Sai Nagar Part-2, Near Basi Farm &amp; Kela Factory, Faridabad, Haryana
+                  121002
+                </p>
+              </div>
+            </div>
+            <!-- Dispatch Phone Numbers -->
+            <div class="flex items-start gap-3.5 mb-5">
+              <span class="material-symbols-outlined text-primary text-xl mt-0.5">headset_mic</span>
+              <div class="w-full">
+                <p class="font-label-md text-label-md text-slate-black">24/7 Dispatch Control Room</p>
+                <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-3">
+                  <a class="font-headline-sm text-headline-sm text-crimson-vibrant hover:text-crimson-deep font-bold transition-colors"
+                    href="tel:+919310632440">
+                    +91 93106 32440
+                  </a>
+                  <span class="hidden sm:inline text-border-strong">|</span>
+                  <a class="font-body-md text-body-md text-secondary hover:text-slate-black transition-colors font-medium"
+                    href="tel:+919818467255">
+                    +91 98184 67255
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Email & Work Hours -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-border-subtle">
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-secondary text-lg mt-0.5">mail</span>
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase text-secondary">Official Inquiries</span>
+                  <p class="font-body-sm text-body-sm text-slate-black font-semibold break-all">support@rydomobility.in
+                  </p>
+                  <p class="font-body-sm text-body-sm text-secondary break-all">sahucab@gmail.com</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-secondary text-lg mt-0.5">schedule</span>
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase text-secondary">Active Shift</span>
+                  <p class="font-body-sm text-body-sm text-slate-black font-semibold">24 Hours / 7 Days</p>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-accent-success">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-success"></span> Full Coverage Active
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- WhatsApp Highway Assistance Banner -->
+          <div
+            class="bg-gradient-to-r from-emerald-900 to-slate-black rounded-xl p-5 text-white flex items-center justify-between shadow-md">
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 rounded-full bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400">
+                <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm leading-tight text-white">Instant WhatsApp Connect</h3>
+                <p class="font-body-sm text-body-sm text-slate-300">Live booking quotes &amp; highway road assistance
+                </p>
+              </div>
+            </div>
+            <a class="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full font-label-md text-label-md flex items-center gap-1 transition-transform duration-150 active:scale-95 shadow"
+              href="https://wa.me/919310632440" rel="noopener noreferrer" target="_blank">
+              <span class="">Message</span>
+              <span class="material-symbols-outlined text-sm">arrow_outward</span>
+            </a>
+          </div>
+          <!-- Regional Coverage & Interactive Stylized Map Card -->
+          <div class="bg-surface-base border border-border-subtle rounded-xl overflow-hidden shadow-sm">
+            <div class="p-4 border-b border-border-subtle flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-base">hub</span>
+                <span class="font-label-md text-label-md text-slate-black">Faridabad HQ &amp; Regional Radius</span>
+              </div>
+              <span
+                class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-muted text-secondary font-medium">Delhi
+                NCR Hub</span>
+            </div>
+            <div class="relative h-56 bg-surface-container overflow-hidden group">
+              <!-- Map Image Integration with required data-alt and data-location -->
+              <img
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                data-alt="A clean, aerial satellite-inspired vector map rendering of the Delhi NCR and Faridabad regional network, highlighted with glowing transit lines, modern architectural coordinates, minimalist monochromatic streets, and sharp crimson location pinpoint markers under bright daylight."
+                data-location="Faridabad, India"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsd-rrMxN5fP2Jqg9KQNqEQOUP_B7CecfiMi8xuJacA-R37iOE10Xp40pdAMwDmWi6XZflBtJCbe3TjJ7ja5xhKIyUZiAr06Jzp2nO-9TBUpzICGs6dimlsVCPk0N4N3AeOqdigWAg7Vi8RP0vnYeDD-edAb24ZP1XE_K-eVzmZ5dplZBUokbVYeugt_vRJ6TB6D0qYO4lYi1KFUJfCQg4mPwAYpNPmvJFG8r6nC5pk1hitZgWM5IbDw">
+              <div class="absolute inset-0 bg-slate-black/15 pointer-events-none"></div>
+              <!-- Floating Location Pill Indicator -->
+              <div
+                class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm border border-border-subtle p-3 rounded-lg shadow-md flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-3 h-3 rounded-full bg-crimson-vibrant ring-4 ring-crimson-tint flex-shrink-0"></span>
+                  <div>
+                    <p class="font-label-sm text-label-sm text-slate-black">Sai Nagar, Sector 86/Basi Farm Area</p>
+                    <p class="font-body-sm text-[11px] text-secondary">Dispatch readiness: &lt; 15 mins to major
+                      corridors</p>
+                  </div>
+                </div>
+                <a class="text-primary hover:text-crimson-deep font-label-sm text-label-sm flex items-center gap-0.5"
+                  href="https://maps.google.com/?q=Sai+Nagar+Faridabad" target="_blank">
+                  Directions
+                  <span class="material-symbols-outlined text-sm">north_east</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- RIGHT COLUMN: Custom Inquiry & Corporate Booking Form (7 cols) -->
+        <div class="lg:col-span-7">
+          <div class="bg-surface-base border border-border-subtle rounded-xl p-6 sm:p-8 shadow-sm">
+            <div class="mb-6">
+              <span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">OPERATIONS DESK
+                INQUIRY</span>
+              <h2 class="font-headline-lg text-headline-lg text-slate-black mt-1">Book a custom trip or enterprise fleet
+              </h2>
+              <p class="font-body-md text-body-md text-secondary mt-1">
+                Fill out your travel parameters. Our central dispatcher will verify fleet inventory and confirm with
+                upfront billing within 15 minutes.
+              </p>
+            </div>
+            <form class="space-y-5" id="contact-form" onsubmit="handleFormSubmit(event)">
+              <!-- Name & Mobile Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-label-md text-label-md text-slate-black mb-1.5" for="fullName">
+                    Full Name <span class="text-crimson-vibrant">*</span>
+                  </label>
+                  <div class="relative">
+                    <span
+                      class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-secondary text-lg">person</span>
+                    <input
+                      class="w-full pl-10 pr-3.5 py-2.5 rounded-lg bg-surface-subtle border border-border-strong text-slate-black placeholder:text-secondary/60 focus:bg-white focus:border-crimson-vibrant focus:ring-2 focus:ring-crimson-tint transition-all outline-none font-body-md text-body-md"
+                      id="fullName" placeholder="e.g. Vikramaditya Sharma" required="" type="text">
+                  </div>
+                </div>
+                <div>
+                  <label class="block font-label-md text-label-md text-slate-black mb-1.5" for="mobileNumber">
+                    Contact Phone Number <span class="text-crimson-vibrant">*</span>
+                  </label>
+                  <div class="relative">
+                    <span
+                      class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-secondary text-lg">call</span>
+                    <input
+                      class="w-full pl-10 pr-3.5 py-2.5 rounded-lg bg-surface-subtle border border-border-strong text-slate-black placeholder:text-secondary/60 focus:bg-white focus:border-crimson-vibrant focus:ring-2 focus:ring-crimson-tint transition-all outline-none font-body-md text-body-md"
+                      id="mobileNumber" placeholder="+91 98000 00000" required="" type="tel">
+                  </div>
+                </div>
+              </div>
+              <!-- Email & Service Type Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-label-md text-label-md text-slate-black mb-1.5" for="email">
+                    Corporate / Personal Email <span class="text-crimson-vibrant">*</span>
+                  </label>
+                  <div class="relative">
+                    <span
+                      class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-secondary text-lg">mail</span>
+                    <input
+                      class="w-full pl-10 pr-3.5 py-2.5 rounded-lg bg-surface-subtle border border-border-strong text-slate-black placeholder:text-secondary/60 focus:bg-white focus:border-crimson-vibrant focus:ring-2 focus:ring-crimson-tint transition-all outline-none font-body-md text-body-md"
+                      id="email" placeholder="name@company.com" required="" type="email">
+                  </div>
+                </div>
+                <div>
+                  <label class="block font-label-md text-label-md text-slate-black mb-1.5" for="serviceType">
+                    Service Modality <span class="text-crimson-vibrant">*</span>
+                  </label>
+                  <div class="relative">
+                    <span
+                      class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-secondary text-lg">directions_car</span>
+                    <select
+                      class="w-full pl-10 pr-8 py-2.5 rounded-lg bg-surface-subtle border border-border-strong text-slate-black focus:bg-white focus:border-crimson-vibrant focus:ring-2 focus:ring-crimson-tint transition-all outline-none font-body-md text-body-md appearance-none"
+                      id="serviceType">
+                      <option value="outstation-round">Outstation Round-Trip</option>
+                      <option value="one-way">One-Way City Drop</option>
+                      <option value="airport">Airport Transfer (IGI T1/T2/T3)</option>
+                      <option value="corporate">Corporate Fleet Account</option>
+                      <option value="long-tour">Long Tour / Multi-City / Tempo Traveller</option>
+                    </select>
+                    <span
+                      class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-secondary pointer-events-none text-base">expand_more</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Route Details: Origin & Destination -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-label-md text-label-md text-slate-black mb-1.5" for="originCity">
+                    Origin / Pickup City <span class="text-crimson-vibrant">*</span>
+                  </label>
+                  <div class="relative">
+                    <span
+                      class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-accent-success text-lg">trip_origin</span>
+                    <input
+                      class="w-full pl-10 pr-3.5 py-2.5 rounded-lg bg-surface-subtle border border-border-strong text-slate-black placeholder:text-secondary/60 focus:bg-white focus:border-crimson-vibrant focus:ring-2 focus:ring-crimson-tint transition-all outline-none font-body-md text-body-md"
+                      id="originCity" placeholder="e.g. Faridabad / Delhi NCR" required="" type="text">
+                  </div>
+                </div>
+                <div>
+                  <label class="block font-label-md text-label-md text-slate-black mb-1.5" for="destCity">
+                    Destination City / Itinerary <span class="text-crimson-vibrant">*</span>
+                  </label>
+                  <div class="relative">
+                    <span
+                      class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-crimson-vibrant text-lg">location_on</span>
+                    <input
+                      class="w-full pl-10 pr-3.5 py-2.5 rounded-lg bg-surface-subtle border border-border-strong text-slate-black placeholder:text-secondary/60 focus:bg-white focus:border-crimson-vibrant focus:ring-2 focus:ring-crimson-tint transition-all outline-none font-body-md text-body-md"
+                      id="destCity" placeholder="e.g. Jaipur, Agra, Chandigarh, Manali" required="" type="text">
+                  </div>
+                </div>
+              </div>
+              <!-- Travel Date & Pickup Time -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-label-md text-label-md text-slate-black mb-1.5" for="travelDate">
+                    Travel Date <span class="text-crimson-vibrant">*</span>
+                  </label>
+                  <div class="relative">
+                    <span
+                      class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-secondary text-lg">calendar_today</span>
+                    <input
+                      class="w-full pl-10 pr-3.5 py-2.5 rounded-lg bg-surface-subtle border border-border-strong text-slate-black focus:bg-white focus:border-crimson-vibrant focus:ring-2 focus:ring-crimson-tint transition-all outline-none font-body-md text-body-md"
+                      id="travelDate" required="" type="date">
+                  </div>
+                </div>
+                <div>
+                  <label class="block font-label-md text-label-md text-slate-black mb-1.5" for="pickupTime">
+                    Pickup Time
+                  </label>
+                  <div class="relative">
+                    <span
+                      class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-secondary text-lg">schedule</span>
+                    <input
+                      class="w-full pl-10 pr-3.5 py-2.5 rounded-lg bg-surface-subtle border border-border-strong text-slate-black focus:bg-white focus:border-crimson-vibrant focus:ring-2 focus:ring-crimson-tint transition-all outline-none font-body-md text-body-md"
+                      id="pickupTime" type="time" value="06:00">
+                  </div>
+                </div>
+              </div>
+              <!-- Special Requirements -->
+              <div>
+                <label class="block font-label-md text-label-md text-slate-black mb-1.5" for="notes">
+                  Special Fleet &amp; Route Notes
+                </label>
+                <textarea
+                  class="w-full px-3.5 py-2.5 rounded-lg bg-surface-subtle border border-border-strong text-slate-black placeholder:text-secondary/60 focus:bg-white focus:border-crimson-vibrant focus:ring-2 focus:ring-crimson-tint transition-all outline-none font-body-md text-body-md"
+                  id="notes"
+                  placeholder="Specify car preference (e.g. Sedan, Innova Crysta, Fortuner), luggage quantity, GST invoice request, or intermediate stopovers..."
+                  rows="3"></textarea>
+              </div>
+              <!-- Verification & Trust Check -->
+              <div class="flex items-center justify-between pt-1">
+                <div class="flex items-center gap-2 text-secondary text-body-sm font-body-sm">
+                  <span class="material-symbols-outlined text-accent-success text-lg">verified_user</span>
+                  <span class="">Zero hidden tolls &amp; upfront fuel calculation guaranteed</span>
+                </div>
+              </div>
+              <!-- Submit CTA -->
+              <button
+                class="w-full bg-crimson-vibrant hover:bg-crimson-deep text-white font-label-lg text-label-lg py-3.5 px-6 rounded-full uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-200 active:scale-[0.98]"
+                type="submit" style="background-color: rgb(235, 91, 55);">
+                <span class="">Send Message to Operations Desk</span>
+                <span class="material-symbols-outlined text-lg">send</span>
+              </button>
+            </form>
+            <div
+              class="hidden mt-4 p-4 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 flex items-center gap-3"
+              id="form-success-banner">
+              <span class="material-symbols-outlined text-accent-success">check_circle</span>
+              <p class="font-body-sm text-body-sm font-medium">Thank you! Your inquiry is logged with dispatch ticket
+                <strong id="ticket-id">#RYD-8821</strong>. Our coordinator will contact your mobile shortly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Support Channels Grid (3 Cards Bento) -->
+    <section class="bg-surface-base border-y border-border-subtle py-space-xl">
+      <div class="max-w-7xl mx-auto px-margin">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">SPECIALIZED SERVICE
+            TEAMS</span>
+          <h2 class="font-headline-lg text-headline-lg text-slate-black mt-1">Dedicated desks for every transit
+            requirement</h2>
+          <p class="font-body-md text-body-md text-secondary mt-1">Choose the specific department to get faster
+            resolutions.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-surface-subtle border border-border-subtle rounded-xl p-6 hover:shadow-md transition-shadow">
+            <div
+              class="w-12 h-12 rounded-lg bg-crimson-tint text-crimson-vibrant flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-2xl"
+                style="font-variation-settings: 'FILL' 1;">emergency_heat</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-slate-black mb-2">24/7 Roadside Assistance &amp; Live
+              Tracking</h3>
+            <p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+              Active journey monitoring for late-night airport arrivals, highway breakdowns, weather rerouting, or
+              driver location coordination.
+            </p>
+            <div class="pt-3 border-t border-border-subtle flex items-center justify-between">
+              <span class="font-label-sm text-label-sm text-secondary">Helpline priority</span>
+              <a class="font-label-md text-label-md text-crimson-vibrant font-bold hover:underline"
+                href="tel:+919310632440">Direct Patch</a>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-surface-subtle border border-border-subtle rounded-xl p-6 hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-lg bg-slate-charcoal text-white flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-2xl">receipt_long</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-slate-black mb-2">Corporate Travel Desk &amp; Monthly
+              Invoicing</h3>
+            <p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+              Centralized accounts for enterprise clients. Monthly consolidated billing, itemized GST tax invoices, and
+              dedicated relationship managers.
+            </p>
+            <div class="pt-3 border-t border-border-subtle flex items-center justify-between">
+              <span class="font-label-sm text-label-sm text-secondary">Response SLA</span>
+              <span class="font-label-md text-label-md text-slate-black font-semibold">&lt; 2 Business Hours</span>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-surface-subtle border border-border-subtle rounded-xl p-6 hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-lg bg-crimson-tint text-primary flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-2xl">travel_explore</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-slate-black mb-2">Lost &amp; Found &amp; Chauffeur
+              Feedback</h3>
+            <p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-4">
+              Left personal belongings in our cabs? Need to report courteous driver performance? Our quality assurance
+              team takes immediate custody.
+            </p>
+            <div class="pt-3 border-t border-border-subtle flex items-center justify-between">
+              <span class="font-label-sm text-label-sm text-secondary">Direct Email</span>
+              <a class="font-label-md text-label-md text-primary font-semibold hover:underline"
+                href="mailto:support@rydomobility.in">support@rydomobility.in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Accordion Section -->
+    <section class="max-w-4xl mx-auto px-margin py-space-2xl">
+      <div class="text-center mb-8">
+        <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">FREQUENT
+          ANSWERS</span>
+        <h2 class="font-headline-lg text-headline-lg text-slate-black mt-1">Questions &amp; answers before you reach out
+        </h2>
+      </div>
+      <div class="space-y-3" id="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="border border-border-subtle rounded-lg bg-surface-base overflow-hidden">
+          <button
+            class="w-full px-5 py-4 text-left flex justify-between items-center hover:bg-surface-subtle transition-colors"
+            onclick="toggleFaq(this)">
+            <span class="font-label-lg text-label-lg text-slate-black">How do I reach emergency support if my chauffeur
+              is delayed?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+          </button>
+          <div class="px-5 pb-4 text-secondary font-body-md text-body-md hidden border-t border-border-subtle/50 pt-3">
+            Dial our priority 24/7 hotline at <strong class="text-slate-black">+91 93106 32440</strong>. You will be
+            instantly connected to our live dispatch supervisor who will patch directly to the chauffeur's GPS tracker
+            or assign an immediate backup vehicle.
+          </div>
+        </div>
+        <!-- FAQ Item 2 -->
+        <div class="border border-border-subtle rounded-lg bg-surface-base overflow-hidden">
+          <button
+            class="w-full px-5 py-4 text-left flex justify-between items-center hover:bg-surface-subtle transition-colors"
+            onclick="toggleFaq(this)">
+            <span class="font-label-lg text-label-lg text-slate-black">Can I alter the destination or pickup time after
+              booking confirmation?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+          </button>
+          <div class="px-5 pb-4 text-secondary font-body-md text-body-md hidden border-t border-border-subtle/50 pt-3">
+            Yes. Pickup adjustments can be made without penalty up to 3 hours prior to the scheduled departure time by
+            calling our support desk or chatting via our official WhatsApp assistance number.
+          </div>
+        </div>
+        <!-- FAQ Item 3 -->
+        <div class="border border-border-subtle rounded-lg bg-surface-base overflow-hidden">
+          <button
+            class="w-full px-5 py-4 text-left flex justify-between items-center hover:bg-surface-subtle transition-colors"
+            onclick="toggleFaq(this)">
+            <span class="font-label-lg text-label-lg text-slate-black">How will I receive the GST tax invoice and toll
+              receipt summary?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+          </button>
+          <div class="px-5 pb-4 text-secondary font-body-md text-body-md hidden border-t border-border-subtle/50 pt-3">
+            Within 30 minutes of trip completion, our automated billing engine sends an itemized PDF invoice including
+            base tariff, toll breakdown, and GST compliance details to your registered email and WhatsApp.
+          </div>
+        </div>
+        <!-- FAQ Item 4 -->
+        <div class="border border-border-subtle rounded-lg bg-surface-base overflow-hidden">
+          <button
+            class="w-full px-5 py-4 text-left flex justify-between items-center hover:bg-surface-subtle transition-colors"
+            onclick="toggleFaq(this)">
+            <span class="font-label-lg text-label-lg text-slate-black">What is the cancellation and advance payment
+              refund timeline?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+          </button>
+          <div class="px-5 pb-4 text-secondary font-body-md text-body-md hidden border-t border-border-subtle/50 pt-3">
+            For cancellations made at least 6 hours before pickup, 100% of the advance amount is credited back to the
+            original payment source within 2 to 4 working bank days.
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Pre-Footer Action Banner -->
+    <section class="bg-gradient-to-r from-crimson-vibrant to-crimson-deep text-white py-10"
+      style="background: linear-gradient(90deg, rgb(235, 91, 55) 0%, rgb(216, 77, 40) 100%);">
+      <div class="max-w-7xl mx-auto px-margin flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <h2 class="font-headline-lg text-headline-lg text-white">Ready for a seamless intercity journey?</h2>
+          <p class="font-body-md text-body-md text-white/80 mt-1">Book your city, airport, or outstation cab today with
+            guaranteed vehicle hygiene and professional drivers.</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <a class="bg-white text-crimson-vibrant hover:bg-slate-100 font-label-md text-label-md px-6 py-3 rounded-full transition-all duration-200 shadow-md whitespace-nowrap active:scale-95 font-bold"
+            href="#" style="color: rgb(235, 91, 55);">
+            Book Now
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer (Shared Component) -->
+  <footer class="bg-[#f7f4ef] border-t border-[#ece6d9] pt-14 pb-8 text-xs text-gray-600">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-[#ece6d9]">
+        <div class="md:col-span-6 space-y-3">
+          <div class="font-extrabold text-base tracking-wider text-black">RYDO MOBILITY</div>
+          <p class="text-[11px] text-gray-500">City, airport, and intercity car rental service across India.</p>
+          <div class="text-[11px] text-gray-500 leading-relaxed pt-2">House No. 79, Street No 4, Sai Nagar
+            Part-2,<br>Near Basi Farm &amp; Kela Factory, Faridabad,<br>Haryana 121002</div>
+        </div>
+        <div class="md:col-span-3 space-y-2">
+          <div class="font-bold text-gray-900 text-xs mb-3">Explore</div>
+          <div><a class="hover:text-black transition" href="code1.html">Rides</a></div>
+          <div><a class="hover:text-black transition" href="code2.html">Fleet</a></div>
+          <div><a class="hover:text-black transition" href="code3.html">Why us</a></div>
+          <div><a class="hover:text-black transition" href="code4.html">Cities</a></div>
+          <div><a class="hover:text-black transition" href="code5.html">Contact</a></div>
+        </div>
+        <div class="md:col-span-3 space-y-2">
+          <div class="font-bold text-gray-900 text-xs mb-3">Support</div>
+          <div><a class="hover:text-black transition" href="index.html#faq">FAQ</a></div>
+          <div><a class="hover:text-black transition" href="index.html#reviews">Reviews</a></div>
+          <div><a class="hover:text-black transition" href="index.html#how-it-works">How it works</a></div>
+          <div><a class="hover:text-black transition" href="code3.html">Why us</a></div>
+          <div><a class="hover:text-black transition" href="code5.html">Contact us</a></div>
+        </div>
+      </div>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[10px] text-gray-400 gap-2">
+        <div class="">© 2026 RYDO MOBILITY. All rights reserved.</div>
+        <div class="">Fares and vehicle availability may vary by route and time.</div>
+      </div>
+    </div>
+  </footer>
+  <!-- Light Vanilla Script for Interactive Elements -->
+  <script>
+    // FAQ Accordion Toggle
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.material-symbols-outlined');
+
+      const isHidden = content.classList.contains('hidden');
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    // Form Mock Submission
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const form = document.getElementById('contact-form');
+      const banner = document.getElementById('form-success-banner');
+      const ticketId = document.getElementById('ticket-id');
+
+      // Generate random ticket number
+      const randomTicket = Math.floor(1000 + Math.random() * 9000);
+      ticketId.textContent = `#RYD-${randomTicket}`;
+
+      banner.classList.remove('hidden');
+      form.reset();
+
+      // Auto scroll slightly to show success
+      banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,666 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Why Us | RYDO MOBILITY - Uncompromised Trust &amp; Safety</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "crimson-deep": "#8A1024",
+            "on-surface-variant": "#5d3f3e",
+            "slate-black": "#111315",
+            "crimson-vibrant": "#D4002A",
+            "on-secondary": "#ffffff",
+            "tertiary-container": "#bd3945",
+            "surface-subtle": "#F8F9FA",
+            "on-secondary-container": "#606366",
+            "tertiary-fixed-dim": "#ffb3b3",
+            "on-secondary-fixed-variant": "#44474a",
+            "primary": "#a6001f",
+            "secondary-fixed-dim": "#c5c6ca",
+            "error-container": "#ffdad6",
+            "primary-fixed-dim": "#ffb3b0",
+            "on-tertiary-fixed-variant": "#8d1326",
+            "on-primary-fixed-variant": "#93001a",
+            "tertiary-fixed": "#ffdad9",
+            "secondary-container": "#dee0e4",
+            "on-primary": "#ffffff",
+            "secondary": "#5c5f62",
+            "on-tertiary-container": "#ffe4e3",
+            "on-primary-container": "#ffe4e2",
+            "surface-bright": "#f8f9ff",
+            "surface-muted": "#EEF1F4",
+            "surface-base": "#FFFFFF",
+            "accent-success": "#0E8345",
+            "surface-container": "#eceef4",
+            "surface": "#f8f9ff",
+            "crimson-tint": "#FFF1F3",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#e7bdba",
+            "on-background": "#191c20",
+            "slate-charcoal": "#1A1D20",
+            "outline": "#926e6d",
+            "on-primary-fixed": "#410006",
+            "on-error": "#ffffff",
+            "border-strong": "#C7CCD4",
+            "primary-fixed": "#ffdad8",
+            "inverse-primary": "#ffb3b0",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#e1e2e6",
+            "inverse-surface": "#2e3136",
+            "primary-container": "#d4002a",
+            "surface-container-low": "#f2f3fa",
+            "on-secondary-fixed": "#191c1f",
+            "accent-gold": "#C59B27",
+            "tertiary": "#9c1f2f",
+            "inverse-on-surface": "#eff0f7",
+            "on-error-container": "#93000a",
+            "surface-dim": "#d8dae0",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#e1e2e9",
+            "background": "#f8f9ff",
+            "border-subtle": "#E2E5E9",
+            "surface-tint": "#bf0025",
+            "on-tertiary-fixed": "#400009",
+            "on-surface": "#191c20",
+            "surface-variant": "#e1e2e9",
+            "surface-container-high": "#e6e8ee"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter-mobile": "0.75rem",
+            "space-xs": "0.25rem",
+            "space-2xl": "4rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin": "2.5rem",
+            "margin-mobile": "1rem"
+          },
+          "fontFamily": {
+            "label-md": ["Montserrat"],
+            "headline-md": ["Montserrat"],
+            "headline-xl": ["Montserrat"],
+            "body-lg": ["Open Sans"],
+            "body-sm": ["Open Sans"],
+            "display-hero-mobile": ["Montserrat"],
+            "body-md": ["Open Sans"],
+            "headline-lg": ["Montserrat"],
+            "label-sm": ["Montserrat"],
+            "display-hero": ["Montserrat"],
+            "headline-sm": ["Montserrat"],
+            "headline-xl-mobile": ["Montserrat"],
+            "label-lg": ["Montserrat"]
+          },
+          "fontSize": {
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "display-hero-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-xl-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style id="theme-warm-vermilion">:root { --warm-vermilion: #eb5b37; --warm-vermilion-hover: #d84d28; --warm-vermilion-tint: #fdf2ee; } .bg-crimson-vibrant { background-color: #eb5b37 !important; } .bg-primary { background-color: #eb5b37 !important; } .hover\:bg-crimson-vibrant:hover { background-color: #eb5b37 !important; } .hover\:bg-primary:hover { background-color: #d84d28 !important; } .text-crimson-vibrant { color: #eb5b37 !important; } .text-primary { color: #eb5b37 !important; } .border-primary { border-color: #eb5b37 !important; } .border-crimson-vibrant { border-color: #eb5b37 !important; } .bg-crimson-tint { background-color: #fdf2ee !important; } .bg-crimson-tint\/50 { background-color: rgba(253, 242, 238, 0.7) !important; } .bg-crimson-tint\/20 { background-color: rgba(253, 242, 238, 0.4) !important; } .border-crimson-tint { border-color: #f7dcd5 !important; } .border-crimson-tint\/40 { border-color: #f7dcd5 !important; } .text-accent-success { color: #eb5b37 !important; } .bg-accent-success { background-color: #10b981 !important; } .selection\:bg-crimson-vibrant *::selection { background-color: #eb5b37 !important; }</style></head>
+<body class="bg-[#f7f4ef] text-[#1c1e21] antialiased selection:bg-[#e95a35] selection:text-white">
+<!-- TopNavBar (Shared Component Execution) -->
+<header class="w-full bg-[#f7f4ef]/95 backdrop-blur sticky top-0 z-50 border-b border-[#ece6d9]"><div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between"><a class="flex items-center gap-2 group" href="index.html"><span class="font-extrabold text-xl tracking-wider text-black">RYDO MOBILITY</span><span class="text-[10px] uppercase font-semibold text-gray-400 tracking-widest pl-1 border-l border-gray-300">Car Rental</span></a><nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700"><a class="hover:text-black transition" href="code1.html">Rides</a><a class="hover:text-black transition" href="code2.html">Fleet</a><a class="text-black font-semibold border-b-2 border-[#e95a35] pb-0.5" href="code3.html">Why us</a><a class="hover:text-black transition" href="code4.html">Cities</a><a class="hover:text-black transition" href="code5.html">Contact</a></nav><div class="flex items-center"><a class="bg-[#141416] hover:bg-black text-white text-xs font-semibold px-5 py-2.5 rounded-md transition shadow-sm" href="#booking">Get a ride</a></div></div></header>
+<!-- Hero Section -->
+<section class="relative pt-12 pb-20 bg-surface-base border-b border-border-subtle overflow-hidden">
+<!-- Subtle Background Accents -->
+<div class="absolute -top-24 right-0 w-96 h-96 bg-crimson-tint rounded-full filter blur-3xl opacity-60 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Content -->
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 bg-crimson-tint border border-outline-variant px-3.5 py-1.5 rounded-full">
+<span class="w-2 h-2 rounded-full bg-crimson-vibrant animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">WHY CHOOSE RYDO MOBILITY</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-slate-black tracking-tight leading-tight">
+            Redefining Intercity &amp; Chauffeur Travel with <span class="text-crimson-vibrant underline decoration-primary-fixed decoration-4 underline-offset-8">Uncompromised Trust</span>.
+          </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl leading-relaxed">
+            With over a decade of operational heritage, 2.4 Million+ successful highway trips, and a strict zero-surge policy, we build every journey around uncompromising safety, predictable fares, and elite hospitality.
+          </p>
+<!-- Trust Badges Row -->
+<div class="pt-2 flex flex-wrap items-center gap-3">
+<div class="inline-flex items-center gap-2 bg-surface-subtle border border-border-subtle px-3.5 py-2 rounded-lg text-slate-charcoal">
+<span class="material-symbols-outlined text-accent-success text-lg" data-icon="verified_user">verified_user</span>
+<span class="font-label-md text-label-md">100% Chauffeur Verified</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-surface-subtle border border-border-subtle px-3.5 py-2 rounded-lg text-slate-charcoal">
+<span class="material-symbols-outlined text-crimson-vibrant text-lg" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Zero Hidden Charges</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-surface-subtle border border-border-subtle px-3.5 py-2 rounded-lg text-slate-charcoal">
+<span class="material-symbols-outlined text-accent-gold text-lg" data-icon="support_agent">support_agent</span>
+<span class="font-label-md text-label-md">24/7 Operations Control</span>
+</div>
+</div>
+</div>
+<!-- Right Visual Showcase Bento -->
+<div class="lg:col-span-5 relative">
+<div class="relative bg-surface-subtle border border-border-subtle rounded-2xl p-4 shadow-xl">
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-charcoal">
+<img class="w-full h-full object-cover" data-alt="A professional chauffeur in a clean crisp dark business suit warmly holding the door open of a gleaming luxury black executive sedan parked near a contemporary terminal building. The ambient natural daylight illuminates the polished chrome accents, pristine interior upholstery, and warm luxury atmosphere reflecting reliable executive transit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBClHuMkZKYXjYcFf_BYK6BdpLKdxhEhaVzOHeljbPbvDLDO16kQkMRq9ijT3kTCqL6m9Q_lufXdP6cwUPxmZMQnb43To3yPA1qpFT-kpWH8hbjVhaOs_7_mWTDsq4zoyRniLJhsxJofaSh9pXsu65vUKetQi7AKM70aKuNJ9HRd3TTQc0iNCrVT5SeMTcZB7LaCTGRIdaAanpo8cEe0Rfbv-BHbaT46Ph7uQkoo1tBQTxZvcphYS21Gg">
+<!-- Floating Live Quality Metric Badge -->
+<div class="absolute bottom-4 left-4 right-4 bg-slate-black/90 backdrop-blur-md p-4 rounded-xl border border-white/10 text-white flex items-center justify-between shadow-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-crimson-vibrant/20 border border-crimson-vibrant flex items-center justify-center text-crimson-vibrant">
+<span class="material-symbols-outlined text-xl" data-icon="shield">shield</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-white">RYDO SafeRide Assurance™</div>
+<div class="font-body-sm text-body-sm text-secondary-fixed-dim">Police-cleared &amp; Highway vetted</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-headline-sm text-headline-sm text-accent-gold flex items-center gap-1 justify-end">
+<span class="material-symbols-outlined text-base fill-1" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                    4.9/5
+                  </div>
+<div class="font-label-sm text-label-sm text-white/70">85K+ Reviews</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition & Metrics Strip -->
+<section class="bg-crimson-vibrant text-white py-10 shadow-md">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
+<div class="pt-4 md:pt-0">
+<div class="font-display-hero text-display-hero font-extrabold tracking-tight">2.4M+</div>
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed mt-1">Trips Completed</div>
+</div>
+<div class="pt-4 md:pt-0">
+<div class="font-display-hero text-display-hero font-extrabold tracking-tight flex items-center justify-center gap-1">
+            4.9<span class="text-accent-gold text-3xl material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed mt-1">Average Customer Rating</div>
+</div>
+<div class="pt-4 md:pt-0">
+<div class="font-display-hero text-display-hero font-extrabold tracking-tight">120+</div>
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed mt-1">Cities Nationwide</div>
+</div>
+<div class="pt-4 md:pt-0">
+<div class="font-display-hero text-display-hero font-extrabold tracking-tight">100%</div>
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed mt-1">Sanitized Fleet Guarantee</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Pillars Grid (The 6 Trust Commitments) -->
+<section class="py-space-2xl bg-surface-subtle">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-crimson-vibrant font-bold">BUILT ON INTEGRITY</span>
+<h2 class="font-headline-xl text-headline-xl text-slate-black tracking-tight">
+          Engineered for Peace of Mind at Every Turn
+        </h2>
+<p class="font-body-md text-body-md text-secondary">
+          No algorithmic surprises, unvetted strangers, or stranded highway delays. Here is our direct operational standard.
+        </p>
+</div>
+<!-- 6 Feature Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-base border border-border-subtle rounded-xl p-space-lg shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-200 group">
+<div class="w-12 h-12 rounded-lg bg-crimson-tint text-crimson-vibrant flex items-center justify-center mb-5 group-hover:bg-crimson-vibrant group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="badge">badge</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-slate-black mb-2 font-bold">
+            Punctual &amp; Background-Verified Drivers
+          </h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed mb-4">
+            Every chauffeur is authenticated with comprehensive police verification, criminal record screenings, defensive highway driving certification, and hospitality conduct training.
+          </p>
+<div class="flex items-center gap-2 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span class="">Zero-Tolerance Conduct Policy</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-base border border-border-subtle rounded-xl p-space-lg shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-200 group">
+<div class="w-12 h-12 rounded-lg bg-crimson-tint text-crimson-vibrant flex items-center justify-center mb-5 group-hover:bg-crimson-vibrant group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="receipt_long">receipt_long</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-slate-black mb-2 font-bold">
+            Fixed, All-Inclusive Transparent Pricing
+          </h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed mb-4">
+            Zero surge pricing regardless of rain, peak festival demand, or late hours. Toll charges, inter-state entry taxes, and chauffeur day allowances are explicitly itemized before confirmation.
+          </p>
+<div class="flex items-center gap-2 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span class="">No Last-Minute Cash Extortions</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-base border border-border-subtle rounded-xl p-space-lg shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-200 group">
+<div class="w-12 h-12 rounded-lg bg-crimson-tint text-crimson-vibrant flex items-center justify-center mb-5 group-hover:bg-crimson-vibrant group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="event_available">event_available</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-slate-black mb-2 font-bold">
+            Free Cancellation Guarantee
+          </h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed mb-4">
+            Travel plans change. Enjoy unconditional cancellation up to 1 hour before scheduled pickup with an instant 100% refund straight to your original payment method. Zero penalties.
+          </p>
+<div class="flex items-center gap-2 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span class="">Instant Digital Refund Credit</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-base border border-border-subtle rounded-xl p-space-lg shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-200 group">
+<div class="w-12 h-12 rounded-lg bg-crimson-tint text-crimson-vibrant flex items-center justify-center mb-5 group-hover:bg-crimson-vibrant group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="hub">hub</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-slate-black mb-2 font-bold">
+            24/7 Dedicated Dispatch Control Room
+          </h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed mb-4">
+            Not just an automated chatbot. Our 24/7 central dispatch actively monitors GPS telemetry, automatically adjusts pickup times for delayed flights, and deploys rapid backup cars if needed.
+          </p>
+<div class="flex items-center gap-2 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span class="">Active Live Route Surveillance</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-base border border-border-subtle rounded-xl p-space-lg shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-200 group">
+<div class="w-12 h-12 rounded-lg bg-crimson-tint text-crimson-vibrant flex items-center justify-center mb-5 group-hover:bg-crimson-vibrant group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="clean_hands">clean_hands</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-slate-black mb-2 font-bold">
+            Pristine &amp; Sanitized Cabin Standard
+          </h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed mb-4">
+            Every fleet vehicle undergoes a multi-point cleanliness checklist prior to dispatch: high-performance sanitized air conditioning, spotless seat upholstery, clean floor mats, and bottled water.
+          </p>
+<div class="flex items-center gap-2 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span class="">Strict Pre-Trip Audits</span>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-base border border-border-subtle rounded-xl p-space-lg shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-200 group">
+<div class="w-12 h-12 rounded-lg bg-crimson-tint text-crimson-vibrant flex items-center justify-center mb-5 group-hover:bg-crimson-vibrant group-hover:text-white transition-colors duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="domain_verification">domain_verification</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-slate-black mb-2 font-bold">
+            Corporate GST Invoicing &amp; Compliance
+          </h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed mb-4">
+            Seamless travel reporting for enterprises and independent business consultants. Receive automated, GST-compliant tax invoices instantly via email to claim your 18% Input Tax Credit.
+          </p>
+<div class="flex items-center gap-2 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span class="">Enterprise Expense Ready</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Comparison Table: RYDO MOBILITY vs Traditional vs Aggregators -->
+<section class="py-space-2xl bg-surface-base border-t border-border-subtle">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-crimson-vibrant font-bold">CLEAR BENCHMARK</span>
+<h2 class="font-headline-xl text-headline-xl text-slate-black tracking-tight">
+          How RYDO Compares to Other Options
+        </h2>
+<p class="font-body-md text-body-md text-secondary">
+          Compare our purpose-built intercity standards directly against informal local taxi stands and mass-market cab apps.
+        </p>
+</div>
+<div class="overflow-x-auto border border-border-subtle rounded-2xl shadow-sm bg-white">
+<table class="w-full text-left border-collapse min-w-[720px]">
+<thead>
+<tr class="border-b border-border-subtle bg-surface-subtle">
+<th class="p-5 font-headline-sm text-headline-sm text-slate-charcoal w-1/3">Key Safety &amp; Service Feature</th>
+<th class="p-5 font-headline-sm text-headline-sm text-crimson-vibrant bg-crimson-tint/50 border-x border-crimson-tint w-1/4">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-crimson-vibrant"></span>
+                  RYDO MOBILITY
+                </div>
+</th>
+<th class="p-5 font-headline-sm text-headline-sm text-secondary w-1/5">Ride Aggregator Apps</th>
+<th class="p-5 font-headline-sm text-headline-sm text-secondary w-1/5">Local Taxi Operators</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-body-md text-body-md text-slate-charcoal">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-subtle/50 transition-colors">
+<td class="p-5 font-medium">
+<div class="font-bold text-slate-black">Pricing Transparency</div>
+<div class="text-xs text-secondary mt-0.5">Surge multipliers &amp; hidden extras</div>
+</td>
+<td class="p-5 bg-crimson-tint/20 border-x border-crimson-tint/40 font-semibold text-accent-success flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-accent-success" data-icon="check_circle">check_circle</span>
+                100% Fixed, All-Inclusive
+              </td>
+<td class="p-5 text-secondary">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-base" data-icon="cancel">cancel</span>
+                  Heavy 1.5x - 3x Surge
+                </div>
+</td>
+<td class="p-5 text-secondary">
+<div class="flex items-center gap-1.5 text-slate-charcoal">
+<span class="material-symbols-outlined text-base text-secondary" data-icon="help">help</span>
+                  Unpredictable Haggling
+                </div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-subtle/50 transition-colors">
+<td class="p-5 font-medium">
+<div class="font-bold text-slate-black">Driver Verification &amp; Training</div>
+<div class="text-xs text-secondary mt-0.5">Vetting, background, and etiquette</div>
+</td>
+<td class="p-5 bg-crimson-tint/20 border-x border-crimson-tint/40 font-semibold text-accent-success flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-accent-success" data-icon="check_circle">check_circle</span>
+                Police-Verified Highway Specialists
+              </td>
+<td class="p-5 text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary" data-icon="remove">remove</span>
+                  Basic App Documentation
+                </div>
+</td>
+<td class="p-5 text-secondary">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-base" data-icon="cancel">cancel</span>
+                  No Standard Background Checks
+                </div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-subtle/50 transition-colors">
+<td class="p-5 font-medium">
+<div class="font-bold text-slate-black">On-Time Pickup Guarantee</div>
+<div class="text-xs text-secondary mt-0.5">Reliability for airport flights &amp; schedules</div>
+</td>
+<td class="p-5 bg-crimson-tint/20 border-x border-crimson-tint/40 font-semibold text-accent-success flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-accent-success" data-icon="check_circle">check_circle</span>
+                Guaranteed 15m Early Arrival
+              </td>
+<td class="p-5 text-secondary">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-base" data-icon="cancel">cancel</span>
+                  Frequent Driver Cancellations
+                </div>
+</td>
+<td class="p-5 text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary" data-icon="remove">remove</span>
+                  Unreliable Timelines
+                </div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-subtle/50 transition-colors">
+<td class="p-5 font-medium">
+<div class="font-bold text-slate-black">Cancellation Policy</div>
+<div class="text-xs text-secondary mt-0.5">Ease of refunds and itinerary adjustment</div>
+</td>
+<td class="p-5 bg-crimson-tint/20 border-x border-crimson-tint/40 font-semibold text-accent-success flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-accent-success" data-icon="check_circle">check_circle</span>
+                Free up to 1hr (100% Instant Refund)
+              </td>
+<td class="p-5 text-secondary">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-base" data-icon="cancel">cancel</span>
+                  Automatic Penalty Charges
+                </div>
+</td>
+<td class="p-5 text-secondary">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-base" data-icon="cancel">cancel</span>
+                  Advance Deposit Forfeiture
+                </div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-subtle/50 transition-colors">
+<td class="p-5 font-medium">
+<div class="font-bold text-slate-black">Vehicle Cleanliness &amp; Comfort</div>
+<div class="text-xs text-secondary mt-0.5">AC standards, smell, and maintenance</div>
+</td>
+<td class="p-5 bg-crimson-tint/20 border-x border-crimson-tint/40 font-semibold text-accent-success flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-accent-success" data-icon="check_circle">check_circle</span>
+                Deep-Cleaned Daily, AC Ensured
+              </td>
+<td class="p-5 text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary" data-icon="help">help</span>
+                  Hit-or-Miss Cleanliness
+                </div>
+</td>
+<td class="p-5 text-secondary">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-base" data-icon="cancel">cancel</span>
+                  Aged &amp; Poorly Maintained Fleet
+                </div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-subtle/50 transition-colors">
+<td class="p-5 font-medium">
+<div class="font-bold text-slate-black">Human Operational Support</div>
+<div class="text-xs text-secondary mt-0.5">Emergency resolution and dispatch escalation</div>
+</td>
+<td class="p-5 bg-crimson-tint/20 border-x border-crimson-tint/40 font-semibold text-accent-success flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-accent-success" data-icon="check_circle">check_circle</span>
+                Direct 24/7 Human Dispatch Line
+              </td>
+<td class="p-5 text-secondary">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-base" data-icon="cancel">cancel</span>
+                  Chatbot Bots Only
+                </div>
+</td>
+<td class="p-5 text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary" data-icon="remove">remove</span>
+                  Single Driver Mobile Number
+                </div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Real Customer Reviews & Verified Testimonials -->
+<section class="py-space-2xl bg-surface-subtle border-t border-border-subtle">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-crimson-vibrant font-bold">CLIENT REPUTATION</span>
+<h2 class="font-headline-xl text-headline-xl text-slate-black tracking-tight mt-1">
+            Real Stories from Frequent Travelers
+          </h2>
+<p class="font-body-md text-body-md text-secondary mt-1">
+            Real experiences across intercity corridors, airport runs, and multi-day family vacations.
+          </p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex -space-x-2 overflow-hidden">
+<div class="inline-block h-9 w-9 rounded-full ring-2 ring-white bg-slate-charcoal text-white font-bold text-xs flex items-center justify-center">RS</div>
+<div class="inline-block h-9 w-9 rounded-full ring-2 ring-white bg-primary text-white font-bold text-xs flex items-center justify-center">PM</div>
+<div class="inline-block h-9 w-9 rounded-full ring-2 ring-white bg-accent-gold text-white font-bold text-xs flex items-center justify-center">AP</div>
+<div class="inline-block h-9 w-9 rounded-full ring-2 ring-white bg-slate-black text-white font-bold text-xs flex items-center justify-center">+4k</div>
+</div>
+<span class="font-label-md text-label-md text-slate-charcoal font-semibold">4.9/5 from 85,000+ reviews</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Review 1: Faridabad / Delhi NCR -->
+<div class="bg-surface-base border border-border-subtle rounded-xl p-6 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-accent-gold">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-xs bg-slate-subtle text-secondary font-medium px-2 py-0.5 rounded">Delhi ➔ Jaipur</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-charcoal italic mb-6 leading-relaxed">
+              "RYDO MOBILITY made our late-night family airport transfer from Faridabad completely stress-free. The driver was 20 minutes early, courteous, and the cabin was immaculate."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-border-subtle">
+<div class="w-9 h-9 rounded-full bg-crimson-tint text-crimson-vibrant font-bold text-sm flex items-center justify-center">
+              RS
+            </div>
+<div>
+<div class="font-label-md text-label-md text-slate-black font-semibold">Rohit Sharma</div>
+<div class="font-body-sm text-body-sm text-secondary">Faridabad, NCR</div>
+</div>
+</div>
+</div>
+<!-- Review 2: Mumbai -->
+<div class="bg-surface-base border border-border-subtle rounded-xl p-6 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-accent-gold">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-xs bg-slate-subtle text-secondary font-medium px-2 py-0.5 rounded">Mumbai ➔ Pune</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-charcoal italic mb-6 leading-relaxed">
+              "We take the Expressway weekly for meetings. Unlike ordinary app cabs that keep cancelling, RYDO gives a fixed receipt and the chauffeur drove with utmost highway discipline."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-border-subtle">
+<div class="w-9 h-9 rounded-full bg-surface-muted text-slate-charcoal font-bold text-sm flex items-center justify-center">
+              AK
+            </div>
+<div>
+<div class="font-label-md text-label-md text-slate-black font-semibold">Ananya Kulkarni</div>
+<div class="font-body-sm text-body-sm text-secondary">Mumbai, MH</div>
+</div>
+</div>
+</div>
+<!-- Review 3: Bengaluru -->
+<div class="bg-surface-base border border-border-subtle rounded-xl p-6 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-accent-gold">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-xs bg-slate-subtle text-secondary font-medium px-2 py-0.5 rounded">BLR ➔ Mysore</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-charcoal italic mb-6 leading-relaxed">
+              "Transparent all-inclusive pricing with GST receipts delivered within minutes. Our corporate finance team approves RYDO invoices without any hesitation."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-border-subtle">
+<div class="w-9 h-9 rounded-full bg-crimson-tint text-crimson-vibrant font-bold text-sm flex items-center justify-center">
+              PM
+            </div>
+<div>
+<div class="font-label-md text-label-md text-slate-black font-semibold">Priya Menon</div>
+<div class="font-body-sm text-body-sm text-secondary">Bengaluru, KA</div>
+</div>
+</div>
+</div>
+<!-- Review 4: Ahmedabad -->
+<div class="bg-surface-base border border-border-subtle rounded-xl p-6 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-accent-gold">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-xs bg-slate-subtle text-secondary font-medium px-2 py-0.5 rounded">Ahmedabad ➔ Surat</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-charcoal italic mb-6 leading-relaxed">
+              "We had to modify our pickup time due to an urgent business reschedule. The dispatch helpline handled it effortlessly with zero extra charges. Unmatched service."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-border-subtle">
+<div class="w-9 h-9 rounded-full bg-surface-muted text-slate-charcoal font-bold text-sm flex items-center justify-center">
+              AP
+            </div>
+<div>
+<div class="font-label-md text-label-md text-slate-black font-semibold">Amit Patel</div>
+<div class="font-body-sm text-body-sm text-secondary">Ahmedabad, GJ</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ready to Ride Conversion Bar -->
+<section class="py-space-2xl bg-surface-base border-t border-border-subtle"><div class="max-w-7xl mx-auto px-margin"><div class="bg-slate-charcoal text-white rounded-2xl p-8 lg:p-12 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"><div class="lg:col-span-6 space-y-4"><div class="inline-flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full text-xs font-semibold text-primary-fixed uppercase tracking-wider"><span class="w-2 h-2 rounded-full bg-crimson-vibrant animate-pulse"></span>24/7 Priority Support Desk</div><h3 class="font-headline-xl text-headline-xl font-bold tracking-tight text-white">Speak with Our Intercity Fleet Specialists</h3><p class="font-body-md text-body-md text-secondary-fixed-dim leading-relaxed">Need immediate booking support, custom corporate rate plans, or intercity wedding convoys? Our verified operations team in Faridabad is available 24/7 with zero waiting time.</p><div class="pt-2 space-y-3 font-body-sm text-body-sm text-secondary-fixed-dim"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-crimson-vibrant text-xl" data-icon="location_on">location_on</span><span class="">House No. 79, Street No 4, Sai Nagar Part-2, Faridabad, Haryana 121002</span></div><div class="flex items-center gap-3"><span class="material-symbols-outlined text-crimson-vibrant text-xl" data-icon="call">call</span><span class="">+91 93106 32440 (Toll-Free Outstation Line)</span></div><div class="flex items-center gap-3"><span class="material-symbols-outlined text-crimson-vibrant text-xl" data-icon="mail">mail</span><span class="">support@rydomobility.in</span></div></div></div><div class="lg:col-span-6 bg-slate-black/60 p-6 md:p-8 rounded-xl border border-white/10 space-y-4"><h4 class="font-headline-sm text-headline-sm text-white font-bold">Request a Priority Callback</h4><p class="text-xs text-secondary-fixed-dim">Share your itinerary and our dispatch manager will call you within 5 minutes.</p><div class="grid grid-cols-1 md:grid-cols-2 gap-3"><input class="w-full bg-slate-charcoal border border-white/20 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-crimson-vibrant" placeholder="Your Full Name" type="text"><input class="w-full bg-slate-charcoal border border-white/20 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-crimson-vibrant" placeholder="Contact Phone Number" type="tel"></div><input class="w-full bg-slate-charcoal border border-white/20 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-crimson-vibrant" placeholder="City &amp; Travel Route (e.g. Delhi to Agra)" type="text"><button class="w-full bg-crimson-vibrant hover:bg-primary text-white font-label-md text-label-md py-3 rounded-lg font-bold transition-colors shadow-md flex items-center justify-center gap-2"><span class="material-symbols-outlined text-lg" data-icon="send">send</span><span class="">Connect With Operations Manager</span></button></div></div></div></section><section class="bg-primary text-white py-12 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-margin flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white font-bold tracking-tight">Ready to experience dignified highway travel?</h2>
+<p class="font-body-md text-body-md text-primary-fixed mt-1">Book your city transfer, airport ride, or multi-day outstation trip in under 60 seconds.</p>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0">
+<a class="inline-flex items-center gap-2 border border-white/30 text-white font-label-md text-label-md px-6 py-3 rounded-full hover:bg-white/10 transition-colors" href="tel:+919310632440">
+<span class="material-symbols-outlined text-lg" data-icon="call">call</span>
+<span class="">Call 24/7 Helpline</span>
+</a>
+<button class="bg-white text-primary font-label-md text-label-md px-8 py-3.5 rounded-full font-bold shadow-lg hover:bg-surface-muted hover:scale-105 active:scale-95 transition-all">
+          Book a Ride
+        </button>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component Execution) -->
+<footer class="bg-[#f7f4ef] border-t border-[#ece6d9] pt-14 pb-8 text-xs text-gray-600"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-[#ece6d9]"><div class="md:col-span-6 space-y-3"><div class="font-extrabold text-base tracking-wider text-black">RYDO MOBILITY</div><p class="text-[11px] text-gray-500">City, airport, and intercity car rental service across India.</p><div class="text-[11px] text-gray-500 leading-relaxed pt-2">House No. 79, Street No 4, Sai Nagar Part-2,<br>Near Basi Farm &amp; Kela Factory, Faridabad,<br>Haryana 121002</div></div><div class="md:col-span-3 space-y-2"><div class="font-bold text-gray-900 text-xs mb-3">Explore</div><div><a class="hover:text-black transition" href="code1.html">Rides</a></div><div><a class="hover:text-black transition" href="code2.html">Fleet</a></div><div><a class="hover:text-black transition" href="code3.html">Why us</a></div><div><a class="hover:text-black transition" href="code4.html">Cities</a></div><div><a class="hover:text-black transition" href="code5.html">Contact</a></div></div><div class="md:col-span-3 space-y-2"><div class="font-bold text-gray-900 text-xs mb-3">Support</div><div><a class="hover:text-black transition" href="index.html#faq">FAQ</a></div><div><a class="hover:text-black transition" href="index.html#reviews">Reviews</a></div><div><a class="hover:text-black transition" href="index.html#how-it-works">How it works</a></div><div><a class="hover:text-black transition" href="code3.html">Why us</a></div><div><a class="hover:text-black transition" href="code5.html">Contact us</a></div></div></div><div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[10px] text-gray-400 gap-2"><div class="">© 2026 RYDO MOBILITY. All rights reserved.</div><div class="">Fares and vehicle availability may vary by route and time.</div></div></div></footer>
+
+
+</body></html>
